@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: `https://kulinski-cmu.github.io/pui-homework-kulinski/solution-hw0/`
+Deployed website: `https://kulinski-cmu.github.io/pui-homework-kulinski/`
 
-Repository link: `https://kulinski-cmu.github.io/pui-homework-kulinski/solution-hw0/index.html/`
+Repository link: `https://github.com/kulinski-cmu/pui-homework-kulinski/`
