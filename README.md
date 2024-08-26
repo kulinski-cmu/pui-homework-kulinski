@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: 'URL here'
+Deployed website: `https://kulinski-cmu.github.io/pui-homework-kulinski/solution-hw0/`
 
-Repository link: `add the URL to this repository`
+Repository link: `https://kulinski-cmu.github.io/pui-homework-kulinski/solution-hw0/index.html/`
