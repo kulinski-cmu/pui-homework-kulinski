@@ -1,78 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="UTF-8">
+  <head>
+    <link rel="stylesheet" type="text/css" href="../solution-hw1/hw1-styling.css"/>
   <title>Product Gallery</title>
-  
+  </head>
+
   <body>
-    <p>Our hand-made cinnamon rolls 
+    <img id = "logo" src = "../assets/logo/logo-01.svg"
+    width = "250"
+    height = "250"
+    alt = "BunBun shop logo"/>
+    <p class="product-link">
+      <a href = "index.html">
+        Products
+    </a>
+    </p>
+    <p class="shopping-cart">
+    <a href = "shoppingCart.html">
+      Cart
+    </a>
+    </p>
+    <br>
+    <br>
+    <p id = "slogan">Our hand-made cinnamon rolls 
       <br>
     </p>
-    <div><img src="../assets/products/original-cinnamon-roll.jpg" 
-      width="300"
-      heigtht="300"
-      alt="original cinnamon roll"/> 
-      <p><a href="./productDetail.html">
+    <div id="original" class ="product">
+      <a href = "../solution-hw1/productDetail.html">
+        <img src="../assets/products/original-cinnamon-roll.jpg" 
+        width="300"
+        heigtht="300"
+        alt="original cinnamon roll"/>
+      <p>
         Original cinnamon roll
-        </a>
         <br>
         $2.49
       </p>
+      </a>
   </div>
-  <div><img src="../assets/products/apple-cinnamon-roll.jpg" 
-      width="300"
-      heigtht="300"
-      alt="apple cinnamon roll"/> 
-      <p><a href="./productDetail.html">
+
+  <div id="apple" class ="product">
+    <a href = "productDetail.html">
+        <img src="../assets/products/apple-cinnamon-roll.jpg" 
+        width="300"
+        heigtht="300"
+        alt="apple cinnamon roll"/> 
+      
+      <p>
+        
         Apple cinnamon roll
-      </a>
+       
       <br>
       $3.49
     </p>
+    </a>
   </div>
-  <div><img src="../assets/products/raisin-cinnamon-roll.jpg" 
-      href="./productDetail.html"
-      width="300"
-      heigtht="300"
-      alt="raisin cinnamon roll"/> 
-      <p><a href="./productDetail.html">
-        Raisin cinnamon roll
-        </a>
-        <br>
-        $2.99
-      </p>
+
+  <div id="raisin" class="product">
+    <a href = "productDetail.html">
+        <img src="../assets/products/raisin-cinnamon-roll.jpg" 
+        width="300"
+        heigtht="300"
+        alt="raisin cinnamon roll"/> 
+     
+    <p>
+   
+      Raisin cinnamon roll
+    
+      <br>
+      $2.99
+    </p>
+    </a>
   </div>
-  <div><img src="../assets/products/walnut-cinnamon-roll.jpg" 
-      width="300"
-      heigtht="300"
-      alt="walnut cinnamon roll"/> 
-      <p><a href="./productDetail.html">
-        Walnut cinnamon roll
-      </a>
+
+  <div id="walnut" class="product">
+    <a href = "productDetail.html">
+        <img src="../assets/products/walnut-cinnamon-roll.jpg" 
+        width="300"
+        heigtht="300"
+        alt="walnut cinnamon roll"/>
+ 
+    <p>
+     
+      Walnut cinnamon roll
+     
       <br>
       $3.49
     </p>
+    </a>
   </div>
-  <div><img src="../assets/products/double-chocolate-cinnamon-roll.jpg" 
+
+  <div id="double-chocolate" class="product">
+    <a href = "productDetail.html">
+      <img src="../assets/products/double-chocolate-cinnamon-roll.jpg" 
       width="300"
       heigtht="300"
       alt="double-chocolate cinnamon roll"/> 
-      <p><a href="./productDetail.html">
+    <p>
         Double-chocolate cinnamon roll
-      </a>
       <br>
       $3.99
     </p>
+  </a>
   </div>
-  <div><img src="../assets/products/strawberry-cinnamon-roll.jpg" 
+
+  <div id="strawberry" class="product">
+    <a href = "productDetail.html">
+      <img src="../assets/products/strawberry-cinnamon-roll.jpg" 
       width="300"
       heigtht="300"
       alt="strawberry cinnamon roll"/>
-      <p><a href="./productDetail.html">
+    <p>
         Strawberry cinnamon roll
-      </a>
       <br>
+      </p>
+      <p class = "price">
       $3.99
     </p>
+    </a>
   </div>
   
   
