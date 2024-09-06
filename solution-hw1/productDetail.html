@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../solution-hw1/hw1-styling.css"/>
     <title>Product Detail</title>
-    <body>
 
-       <div>
-        <p>Original cinnamon roll
+    <nav>
+       <a class = "logo" href = "index.html">
+        <img id = "logo" src = "../assets/logo/logo-01.svg"
+        width = "400"
+        height = "400"
+        alt = "BunBun shop logo"/>
+        </a>
+      </nav>
+
+    <body>
+        <p class="product-link">
+            <a href = "index.html">
+              Products
+          </a>
+          </p>
+          <p class="shopping-cart">
+          <a href = "shoppingCart.html">
+            Cart
+          </a>
+          </p>
+          <br>
+          <br>
+       <div class = "product">
+        <p id = "slogan">Original cinnamon roll
             <br>
         </p>
         <img src="../assets/products/original-cinnamon-roll.jpg" 
             width="300"
             heigtht="150"
             alt="original cinnamon roll"/> 
-            <p>Customize our delicious, hand-made cinnamon roll to your liking!
-                <br>
-            </p>
         </div>  
-
-        <div>
-            <p>Glazing:
+        <div id = "textbox">
+        <p id = "product-description">Customize our delicious, hand-made cinnamon roll to your liking!
                 <br>
             </p>
-            <ul>
-                <li>Keep original</li>
-                <li>Sugar milk</li>
-                <li>Vanilla milk</li>
-                <li>Double chocolate</li>
-            </ul>
+        </div>
+        <div id = selection>
+            <p>Glazing:
+            
+            </p>
+            <select class = "select-box" id = "flavors">
+                <option value = "Keep original">Keep original</option>
+                <option value = "Sugar milk">Sugar milk</option>
+                <option value = "Vanillia milk">Vanillia milk</option>
+                <option value = "Double chocolate">Double chocolate</option>
+            </select>
+        
             <br>
             <p>Pack size:
                 <br>
             </p>
-            <ul>
-                <li>1</li>
-                <li>3</li>
-                <li>6</li>
-                <li>12</li>
-            </ul>
+            <select class = "select-box" id = "amount">
+                <option value = "1">1</option>
+                <option value = "3">3</option>
+                <option value = "6">6</option>
+                <option value = "12">12</option>
+            </select>
             <br>
         </div>
     </body>
