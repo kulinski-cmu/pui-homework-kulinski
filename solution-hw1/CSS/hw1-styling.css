@@ -71,7 +71,7 @@ div.product img {
     display : flex;
     flex-direction : column;
     width : 200px;
-    align-items : center;
+    justify-content : center;
     font-size : 18px;
 
 }
@@ -92,14 +92,21 @@ div.product img {
 }
 
 footer.detail-footer {
-    font-size : 15px;
     display : flex;
-    flex-direction : column;
+    align-items : center;
+    justify-content : center;
+    
+}
+
+footer.detail-footer p {
+    font-size : 20px;
+    font-weight : bold;
 }
 
 #button-add-to-cart {
     border : 2px solid black;
     background : yellow;
+    margin : 20px;
     width : 100px;
     height : 30px;
     font-size : 15px;
@@ -107,6 +114,7 @@ footer.detail-footer {
     display : flex;
     flex-direction : column;
     align-items : center;
+    justify-content : center;
 }
 
 footer.shopping-cart-footer {
