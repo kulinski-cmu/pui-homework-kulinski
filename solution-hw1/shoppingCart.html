@@ -7,11 +7,13 @@
     </head>
 
     <nav>
-        <img id = "logo" src = "../assets/logo/logo-01.svg"
-        width = "400"
-        height = "400"
-        alt = "BunBun shop logo"/>
-      </nav>
+      <a class = "logo" href = "index.html">
+       <img id = "logo" src = "../assets/logo/logo-01.svg"
+       width = "400"
+       height = "400"
+       alt = "BunBun shop logo"/>
+       </a>
+     </nav>
   <body>
     <p class="product-link">
         <a href = "index.html">
@@ -27,7 +29,7 @@
       <br>
 
     <div class="product">
-        <p>Shopping Cart</p>
+        <p id = "shopping-cart-text">Shopping Cart</p>
         <br>
         <img src="../assets/products/original-cinnamon-roll.jpg"
             width="150"
@@ -35,7 +37,7 @@
             alt="original cinnamon roll">
         <br>
         Remove
-        <p>
+        <p id = "product-information">
             Original Cinnamon Roll
             <br>
             Glazing: Keep original
@@ -51,7 +53,7 @@
             alt="double-chocolate cinnamon roll">
             <br>
             Remove
-        <p>
+        <p id = "product-information">
             Double-Chocolate Cinnamon Roll
             <br>
             Glazing: Sugar milk
@@ -62,4 +64,12 @@
         </p>
     </div>
   </body>
+  <footer class = "shopping-cart-footer">
+    <div>
+      <p id = "shopping-cart-total">Total: $29.94</p>
+    </div>
+    <div class = "button">
+      checkout
+    </div>
+  </footer>
 </html>
