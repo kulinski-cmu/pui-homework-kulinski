@@ -2,7 +2,7 @@
 <html lang="en">
   <meta charset="UTF-8">
   <head>
-  <title>Shopping Cart</title>
+  <title>Shopping Cart</title> <!--shows the user's selections-->
   <link rel="stylesheet" type="text/css" href="../solution-hw1/CSS/hw1-styling.css"/>
   </head>
 
@@ -16,19 +16,18 @@
      </nav>
 
   <body>
-    <p class="product-link">
-        <a href = "index.html">
+      <!--links to the other pages-->
+        <a class = "product-link-notproduct" href = "index.html">
           Products
       </a>
-    </p>
-    <p class="shopping-cart">
-      <a href = "shoppingCart.html">
+    
+      <a class = "shopping-cart-cart" href = "shoppingCart.html">
         Cart
       </a>
-    </p>
     <br>
     <br>
 
+    <!--shows the products the user has selected to purchase-->
     <div class="product">
         <p id = "shopping-cart-text">Shopping Cart</p>
         <br>
@@ -38,6 +37,7 @@
             alt="original cinnamon roll">
         <br>
         Remove
+        <!--shows the specific choices for this product-->
         <p id = "product-information">
             Original Cinnamon Roll
             <br>
@@ -48,12 +48,15 @@
             $2.49
         </p>
         <br>
+
+        <!--shows the products the user has selected to purchase-->
         <img src="../assets/products/double-chocolate-cinnamon-roll.jpg"
             width="150"
             height="150"
             alt="double-chocolate cinnamon roll">
             <br>
             Remove
+             <!--shows the specific choices for this product-->
         <p id = "product-information">
             Double-Chocolate Cinnamon Roll
             <br>
@@ -66,6 +69,7 @@
     </div>
   </body>
 
+   <!--displays the price and checkout button-->
   <footer class = "shopping-cart-footer">
     <div>
       <p id = "shopping-cart-total">Total: $29.94</p>

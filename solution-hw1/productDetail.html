@@ -2,7 +2,7 @@
 <html lang="en-us">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../solution-hw1/CSS/hw1-styling.css"/>
-    <title>Product Detail</title>
+    <title>Product Detail</title> <!--shows the individual choices for each purchase-->
 
     <nav>
        <a class = "logo" href = "index.html">
@@ -14,19 +14,18 @@
       </nav>
 
     <body>
-        <p class="product-link">
-            <a href = "index.html">
-              Products
-          </a>
-        </p>
-        <p class="shopping-cart">
-          <a href = "shoppingCart.html">
+        <!--links for the other pages, specifies which one to highlight-->
+        <a class = "product-link" href = "index.html">
+            Products
+        </a>
+        <a class = "shopping-cart-notcart" href = "shoppingCart.html">
             Cart
-          </a>
-        </p>
+        </a>
         <br>
         <br>
-       <div class = "product">
+
+        <!--shows the product that the user is currently looking at-->
+        <div class = "product">
             <p id = "slogan">Original cinnamon roll
             <br>
             </p>
@@ -40,6 +39,8 @@
             <br>
             </p>
         </div>
+
+        <!--allows the user to choose their glaze flavor-->
         <div id = selection>
             <p>Glazing:</p>
             <select class = "select-box" id = "flavors">
@@ -49,6 +50,8 @@
                 <option value = "Double chocolate">Double chocolate</option>
             </select>
             <br>
+
+            <!--allows the user to choose how many they want-->
             <p>Pack size:
             <br>
             </p>
@@ -62,6 +65,7 @@
         </div>
     </body>
 
+    <!--displays add to cart and the total-->
     <footer class = "detail-footer">
         <div>
             <p>$2.49</p>
