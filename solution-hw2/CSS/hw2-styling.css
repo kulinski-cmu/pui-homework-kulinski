@@ -1,0 +1,215 @@
+/*styling for all the products on the product gallery*/
+div.product  {
+    display : flex;
+    flex-direction : column;
+    justify-content : space-around;
+    align-items : center;
+    padding : 10px;
+    border : 4px;
+}
+
+/*styling for the navigation bar with the logo*/
+nav {
+    display : flex;
+    align-items : stretch;
+
+}
+div.temp {
+    display : flex;
+    flex-direction : column;
+    align-items : flex-start;
+    justify-content : space-around;
+    width : 100%;
+}
+
+div.nav-links {
+    display : flex;
+    flex-direction : row;
+    justify-content : flex-end;
+    border-bottom : 4px solid black;
+    width : 100%;
+}
+
+img.logo {
+    width : 400px;
+    height : 400px;
+    background-color : white;
+    padding : 10px;
+
+}
+
+/*styling for the product link on the product gallery and product detail pages*/
+a.product-link {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    font-size : 30px;
+    text-decoration : none;
+    background-color : yellow;
+    width : 120px;
+    margin : 30px;
+}
+
+/*styling for the product link on the shopping cart page*/
+a.product-link-notproduct{
+    display : flex;
+    font-size : 30px;
+    text-decoration : none;
+    margin : 30px;
+}
+
+/*stying for the shopping cart link on the product detail and product gallery page*/
+a.shopping-cart-notcart {
+    display : flex;
+    font-size : 30px;
+    text-decoration : none;
+    margin : 30px;
+}
+
+/*styling for the shopping cart link on the shopping cart page*/
+a.shopping-cart-cart {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    font-size : 30px;
+    text-decoration : none;
+    background-color : yellow;
+    width : 70px;
+    margin : 30px;
+}
+
+/*styling for the slogan present on the product gallery page*/
+#slogan{
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    font-size : 25px;
+}
+/*general rule for all links*/
+a {
+    color : black;
+}
+
+/*styling for product links to the product detail page when hovering*/
+ div.product a:hover {
+    border : solid yellow;
+    background-color : yellow;
+    font-weight : bold;
+}
+
+div.product-layout {
+    display : flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+    justify-content : space-around;
+    margin : 30px;
+}
+
+div.product {
+    border : 4px solid white;
+}
+
+/*styling for text on the product gallery page*/
+div.product p{
+    align-self : center;
+    font-size : 15px;
+    color : black;
+}
+
+/*adds the border to the product images*/
+div.product img {
+    border : 2px solid black;
+    width : 285px;
+    height : 285px;
+}
+
+/*box for the information on the product detail page*/
+#textbox{
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+/*text within the textbox*/
+#product-description {
+    display : flex;
+    flex-direction : column;
+    width : 200px;
+    justify-content : center;
+    font-size : 18px;
+
+}
+
+/*formats the selection menus for the product detail page*/
+#selection{
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+/*formating for the text at the top of the shopping cart page*/
+#shopping-cart-text {
+    font-size : 30px;
+}
+
+/*formatting for the product information below each picture for the shopping cart page*/
+#product-information {
+    font-size : 18px;
+}
+
+/*formatting for the footer on the product detail page*/
+footer.detail-footer {
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    
+}
+
+/*formatting for the text inside the footer of the product detail page*/
+footer.detail-footer p {
+    font-size : 20px;
+    font-weight : bold;
+}
+
+/*formatting for the add to cart button on the product detail page*/
+#button-add-to-cart {
+    border : 2px solid black;
+    background : yellow;
+    margin : 20px;
+    width : 100px;
+    height : 30px;
+    font-size : 15px;
+    font-weight : bold;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    justify-content : center;
+}
+
+/*formatting for the footer on the shopping cart page*/
+footer.shopping-cart-footer {
+    border-top : 4px solid black;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+/*text inside the footer of the shopping cart page*/
+#shopping-cart-total{
+    font-size : 20px;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+/*formatting for the checkout button on the shopping cart page*/
+div.button {
+    border : 2px solid black;
+    background : yellow;
+    width : 100px;
+    height : 30px;
+    font-size : 20px;
+    font-weight : bold;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}

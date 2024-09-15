@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <head>
+  <title>Shopping Cart</title> <!--shows the user's selections-->
+  <link rel="stylesheet" type="text/css" href="../solution-hw2/CSS/hw2-styling.css"/>
+  </head>
+
+  <nav>
+    <a href = "../solution-hw2/index.html">
+      <img class = "logo" src = "../assets/logo/logo-01.svg"
+    alt = "BunBun shop logo"/>
+    </a>
+    <div class = "temp">
+   <div class = "nav-links">
+    <a class = "product-link" href = "../solution-hw2/index.html">
+        Products
+      </a>
+      <a class = "shopping-cart-notcart" href = "shoppingCart.html">
+      Cart
+      </a>
+    </div>
+    <p id = "slogan">Our hand-made cinnamon rolls 
+      <br>
+    </p>
+    </div>
+  </nav>
+
+  <body>
+    <!--shows the products the user has selected to purchase-->
+    <div class="product">
+        <p id = "shopping-cart-text">Shopping Cart</p>
+        <br>
+        <img src="../assets/products/original-cinnamon-roll.jpg"
+            width="150"
+            height="150"
+            alt="original cinnamon roll">
+        <br>
+        Remove
+        <!--shows the specific choices for this product-->
+        <p id = "product-information">
+            Original Cinnamon Roll
+            <br>
+            Glazing: Keep original
+            <br>
+            Pack Size: 1
+            <br>
+            $2.49
+        </p>
+        <br>
+
+        <!--shows the products the user has selected to purchase-->
+        <img src="../assets/products/double-chocolate-cinnamon-roll.jpg"
+            width="150"
+            height="150"
+            alt="double-chocolate cinnamon roll">
+            <br>
+            Remove
+             <!--shows the specific choices for this product-->
+        <p id = "product-information">
+            Double-Chocolate Cinnamon Roll
+            <br>
+            Glazing: Sugar milk
+            <br>
+            Pack Size: 6
+            <br>
+            $27.45
+        </p>
+    </div>
+  </body>
+
+   <!--displays the price and checkout button-->
+  <footer class = "shopping-cart-footer">
+    <div>
+      <p id = "shopping-cart-total">Total: $29.94</p>
+    </div>
+    <div class = "button">
+      checkout
+    </div>
+  </footer>
+
+</html>
