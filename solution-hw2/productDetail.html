@@ -27,12 +27,12 @@
     <body>
         
         <!--shows the product that the user is currently looking at-->
-        <div class = "product">
+        <div class = "product-detail-page"> 
+        <div class = "original-cinnamon-roll-product">
             <img src="../assets/products/original-cinnamon-roll.jpg" 
-                width="300"
-                heigtht="150"
                 alt="original cinnamon roll"/> 
-        </div>  
+        </div>
+       <div class = "product-detail-page-text">
         <div id = "textbox">
             <p id = "product-description">Customize our delicious, hand-made cinnamon roll to your liking!
             <br>
@@ -51,9 +51,7 @@
             <br>
 
             <!--allows the user to choose how many they want-->
-            <p>Pack size:
-            <br>
-            </p>
+            <p>Pack size:</p>
             <select class = "select-box" id = "amount">
                 <option value = "1">1</option>
                 <option value = "3">3</option>
@@ -62,15 +60,17 @@
             </select>
             <br>
         </div>
+        <div id = "price-and-button">
+            <p id = "product-price">$2.49</p>
+            <div id = "button-add-to-cart">
+                Add to Cart
+            </div>
+            </div>
+        </div>
+    </div>
+     
     </body>
 
     <!--displays add to cart and the total-->
-    <footer class = "detail-footer">
-        <div>
-            <p>$2.49</p>
-        </div>
-        <div id = "button-add-to-cart">
-            Add to Cart
-        </div>
-    </footer>
+   
 </html>

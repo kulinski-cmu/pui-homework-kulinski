@@ -83,7 +83,7 @@ a.shopping-cart-cart {
     display : flex;
     flex-direction : column;
     align-items : center;
-    font-size : 25px;
+    font-size : 30px;
 }
 /*general rule for all links*/
 a {
@@ -123,19 +123,39 @@ div.product img {
     height : 285px;
 }
 
+div.original-cinnamon-roll-product img {
+    border : 2px solid black;
+    width : 600px;
+    height : 600px;
+}
+
+div.product-detail-page {
+    display : flex;
+    justify-content : space-evenly;
+}
+
+div.product-detail-page-text {
+    display : flex;
+    flex-direction : column;
+    justify-content : space-around;
+    align-items : baseline;
+    width : auto;
+}
+
 /*box for the information on the product detail page*/
 #textbox{
     display : flex;
     flex-direction : column;
     align-items : center;
 }
+
 /*text within the textbox*/
 #product-description {
     display : flex;
     flex-direction : column;
-    width : 200px;
+    width : 300px;
     justify-content : center;
-    font-size : 18px;
+    font-size : 30px;
 
 }
 
@@ -144,6 +164,20 @@ div.product img {
     display : flex;
     flex-direction : column;
     align-items : center;
+    font-size : 30px;
+}
+
+#selection p {
+    display : flex;
+    margin : 0px;
+    width : 300px;
+}
+
+select {
+    width : 300px;
+    height : 50px;
+    font-size : 20px;
+    border : 2px solid black;
 }
 
 /*formating for the text at the top of the shopping cart page*/
@@ -156,17 +190,17 @@ div.product img {
     font-size : 18px;
 }
 
-/*formatting for the footer on the product detail page*/
-footer.detail-footer {
+#price-and-button {
     display : flex;
-    align-items : center;
+    flex-direction : row;
     justify-content : center;
-    
 }
 
 /*formatting for the text inside the footer of the product detail page*/
-footer.detail-footer p {
-    font-size : 20px;
+#product-price {
+    display : flex;
+    align-items : center;
+    font-size : 30px;
     font-weight : bold;
 }
 
@@ -174,10 +208,10 @@ footer.detail-footer p {
 #button-add-to-cart {
     border : 2px solid black;
     background : yellow;
-    margin : 20px;
-    width : 100px;
-    height : 30px;
-    font-size : 15px;
+    margin : 30px;
+    width : 140px;
+    height : 50px;
+    font-size : 25px;
     font-weight : bold;
     display : flex;
     flex-direction : column;
