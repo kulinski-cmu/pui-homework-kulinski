@@ -5,7 +5,7 @@ div.product  {
     justify-content : space-around;
     align-items : center;
     padding : 10px;
-    border : 4px;
+    border : 4px solid white;
 }
 
 /*styling for the navigation bar with the logo*/
@@ -19,7 +19,7 @@ div.temp {
     flex-direction : column;
     align-items : flex-start;
     justify-content : space-around;
-    width : 100%;
+    width : 800px;
 }
 
 div.nav-links {
@@ -27,7 +27,7 @@ div.nav-links {
     flex-direction : row;
     justify-content : flex-end;
     border-bottom : 4px solid black;
-    width : 100%;
+    width : 800px;
 }
 
 img.logo {
@@ -44,6 +44,7 @@ a.product-link {
     flex-direction : column;
     align-items : center;
     font-size : 30px;
+    font-family : helvetica;
     text-decoration : none;
     background-color : yellow;
     width : 120px;
@@ -54,6 +55,7 @@ a.product-link {
 a.product-link-notproduct{
     display : flex;
     font-size : 30px;
+    font-family : helvetica;
     text-decoration : none;
     margin : 30px;
 }
@@ -62,6 +64,7 @@ a.product-link-notproduct{
 a.shopping-cart-notcart {
     display : flex;
     font-size : 30px;
+    font-family : helvetica;
     text-decoration : none;
     margin : 30px;
 }
@@ -72,6 +75,7 @@ a.shopping-cart-cart {
     flex-direction : column;
     align-items : center;
     font-size : 30px;
+    font-family : helvetica;
     text-decoration : none;
     background-color : yellow;
     width : 70px;
@@ -84,10 +88,12 @@ a.shopping-cart-cart {
     flex-direction : column;
     align-items : center;
     font-size : 30px;
+    font-family : helvetica;
 }
 /*general rule for all links*/
 a {
     color : black;
+    font-family : helvetica;
 }
 
 /*styling for product links to the product detail page when hovering*/
@@ -105,14 +111,11 @@ div.product-layout {
     margin : 30px;
 }
 
-div.product {
-    border : 4px solid white;
-}
-
 /*styling for text on the product gallery page*/
 div.product p{
     align-self : center;
     font-size : 15px;
+    font-family : helvetica;
     color : black;
 }
 
@@ -177,17 +180,59 @@ select {
     width : 300px;
     height : 50px;
     font-size : 20px;
+    font-family : helvetica;
     border : 2px solid black;
 }
 
-/*formating for the text at the top of the shopping cart page*/
-#shopping-cart-text {
+div.shopping-cart {
+    display : flex;
+    padding-left : 400px;
+    padding-right : 70px;
+    justify-content : space-around;
+    width : 730px;
+}
+
+div.product-cart img {
+    border : 2px solid black;
+    width : 285px;
+    height : 285px;
+}
+
+div.product-information {
+    display : flex;
+    flex-direction : column;
+}
+
+div.shopping-cart-price {
+    display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+    font-size : 22px;
+    font-family : helvetica;
+    margin-top : 80px;
+    margin-bottom : 220px;
+}
+
+div.product-information p{
+    font-size : 22px;
+    font-family : helvetica;
+    padding : 10px;
+    margin : 10px;
+}
+
+p.remove {
+    display : flex;
     font-size : 30px;
+    font-weight : bold;
+    font-family : helvetica;
+    text-decoration : underline;
+    justify-content : flex-start;
 }
 
 /*formatting for the product information below each picture for the shopping cart page*/
 #product-information {
     font-size : 18px;
+    font-family : helvetica;
 }
 
 #price-and-button {
@@ -201,6 +246,7 @@ select {
     display : flex;
     align-items : center;
     font-size : 30px;
+    font-family : helvetica;
     font-weight : bold;
 }
 
@@ -209,9 +255,10 @@ select {
     border : 2px solid black;
     background : yellow;
     margin : 30px;
-    width : 140px;
+    width : 160px;
     height : 50px;
     font-size : 25px;
+    font-family : helvetica;
     font-weight : bold;
     display : flex;
     flex-direction : column;
@@ -222,28 +269,39 @@ select {
 /*formatting for the footer on the shopping cart page*/
 footer.shopping-cart-footer {
     border-top : 4px solid black;
+    margin-left : 400px;
+    width : 730px;
     display : flex;
     flex-direction : column;
-    align-items : center;
+    justify-content : flex-end;
+    align-items : flex-end;
+  
+}
+
+div.shopping-cart-total {
+    display : flex;
+    flex-direction : row;
+    width : 400px;
+    justify-content : space-between;
 }
 
 /*text inside the footer of the shopping cart page*/
-#shopping-cart-total{
-    font-size : 20px;
-    display : flex;
-    flex-direction : column;
-    align-items : center;
+div.shopping-cart-total p{
+    font-size : 25px;
+    font-family : helvetica;
 }
 
 /*formatting for the checkout button on the shopping cart page*/
 div.button {
-    border : 2px solid black;
+    border : 1px solid black;
     background : yellow;
-    width : 100px;
-    height : 30px;
+    width : 130px;
+    height : 50px;
     font-size : 20px;
+    font-family : helvetica;
     font-weight : bold;
     display : flex;
     flex-direction : column;
+    justify-content : center;
     align-items : center;
 }
