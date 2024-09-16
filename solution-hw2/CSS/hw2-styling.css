@@ -14,6 +14,8 @@ nav {
     align-items : stretch;
 
 }
+
+/*container for the navigation links to line up correctly*/
 div.temp {
     display : flex;
     flex-direction : column;
@@ -22,6 +24,7 @@ div.temp {
     width : 800px;
 }
 
+/*Styling for the navigation links*/
 div.nav-links {
     display : flex;
     flex-direction : row;
@@ -30,6 +33,7 @@ div.nav-links {
     width : 800px;
 }
 
+/*styling for the logo*/
 img.logo {
     width : 400px;
     height : 400px;
@@ -103,6 +107,7 @@ a {
     font-weight : bold;
 }
 
+/*container for the products on the product page*/
 div.product-layout {
     display : flex;
     flex-direction : row;
@@ -170,12 +175,14 @@ div.product-detail-page-text {
     font-size : 30px;
 }
 
+/*styling for the text withing the selection*/
 #selection p {
     display : flex;
     margin : 0px;
     width : 300px;
 }
 
+/*styling for the selection boxes*/
 select {
     width : 300px;
     height : 50px;
@@ -184,6 +191,7 @@ select {
     border : 2px solid black;
 }
 
+/*flex container for the contents of the shopping cart page*/
 div.shopping-cart {
     display : flex;
     padding-left : 400px;
@@ -192,17 +200,20 @@ div.shopping-cart {
     width : 730px;
 }
 
+/*styling for the images on the shopping cart page*/
 div.product-cart img {
     border : 2px solid black;
     width : 285px;
     height : 285px;
 }
 
+/*container for the text in the shopping cart page*/
 div.product-information {
     display : flex;
     flex-direction : column;
 }
 
+/*styling and container for the prices associated with the different items on the shopping cart page*/
 div.shopping-cart-price {
     display : flex;
     flex-direction : column;
@@ -213,6 +224,7 @@ div.shopping-cart-price {
     margin-bottom : 220px;
 }
 
+/*styling for the text on the shopping cart page*/
 div.product-information p{
     font-size : 22px;
     font-family : helvetica;
@@ -220,6 +232,7 @@ div.product-information p{
     margin : 10px;
 }
 
+/*styling for the remove "buttons" on the shopping cart page*/
 p.remove {
     display : flex;
     font-size : 30px;
@@ -235,6 +248,7 @@ p.remove {
     font-family : helvetica;
 }
 
+/*container for the price and the checkout button*/
 #price-and-button {
     display : flex;
     flex-direction : row;
@@ -278,6 +292,7 @@ footer.shopping-cart-footer {
   
 }
 
+/*stying for the shopping cart total*/
 div.shopping-cart-total {
     display : flex;
     flex-direction : row;
