@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../solution-hw3/CSS/hw3-styling.css"/>
+    <script defer src="../solution-hw3/JavaScript/productDetailSelection.js"></script>
+    <title>Product Detail</title> <!--shows the individual choices for each purchase-->
+
+    <nav>
+        <a href = "../solution-hw3/index.html">
+          <img class = "logo" src = "../assets/logo/logo-01.svg"
+          alt = "BunBun shop logo"/>
+        </a>
+        <div class = "temp">
+            <div class = "nav-links">
+            <a class = "product-link" href = "../solution-hw3/index.html">
+                Products
+            </a>
+            <a class = "shopping-cart-notcart" href = "shoppingCart.html">
+                Cart
+            </a>
+            </div>
+            <p id = "slogan">Original cinnamon roll
+                <br>
+            </p>
+        </div>
+      </nav>
+
+    <body>
+        <!--shows the product that the user is currently looking at-->
+        <div class = "product-detail-page"> 
+            <div class = "original-cinnamon-roll-product">
+                <img src="../assets/products/original-cinnamon-roll.jpg" 
+                alt="original cinnamon roll"/> 
+            </div>
+            <div class = "product-detail-page-text">
+                <div id = "textbox">
+                    <p id = "product-description">Customize our delicious, hand-made cinnamon roll to your liking!
+                    <br>
+                    </p>
+                </div>
+
+                <!--allows the user to choose their glaze flavor-->
+                <div id = selection>
+                    <p>Glazing:</p>
+                    <select class = "select-box" id = "flavors">
+                        <option value = "Keep original">Keep original</option>
+                        <option value = "Sugar milk">Sugar milk</option>
+                        <option value = "Vanillia milk">Vanillia milk</option>
+                        <option value = "Double chocolate">Double chocolate</option>
+                    </select>
+                    <br>
+
+                     <!--allows the user to choose how many they want-->
+                    <p>Pack size:</p>
+                    <select class = "select-box" id = "amount">
+                        <option value = "1">1</option>
+                        <option value = "3">3</option>
+                        <option value = "6">6</option>
+                        <option value = "12">12</option>
+                    </select>
+                    <br>
+                </div>
+                <div id = "price-and-button">
+                    <p id = "product-price">$2.49</p>
+                    <div id = "button-add-to-cart">
+                        Add to Cart
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body> 
+</html>
