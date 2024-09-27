@@ -1,3 +1,5 @@
+import rolls from './rollsData.js';
+
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const chosenRoll = params.get('roll');
@@ -5,26 +7,37 @@ const chosenRoll = params.get('roll');
 let sloganElement = document.querySelector('#detail-slogan');
 let priceElement = document.querySelector('#product-price');
 let pictureElement = document.querySelector('#product-photo');
-
-const basePrice = 2.49;
-
 sloganElement.innerText = chosenRoll + ' cinnamon roll';
-priceElement.innerText = basePrice;
+const base = rolls[chosenRoll]["basePrice"];
+priceElement.innerText = '$' + base;
+pictureElement.src = '../assets/products/' + rolls[chosenRoll]["imageFile"];
 
 
-console.log(basePrice);
+const cart = [];
+
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing = rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+}
+
+
 
 let selectGlaze = document.querySelector('#flavors');
 let selectSize = document.querySelector('#amount');
-let glazeValue = 'Original';
+let addToCart = document.querySelector('#button-add-to-cart')
+let glazeValue = 'Keep original';
 let sizeValue = 1;
 /*
 *This function computes the new price based on the selections made by the user
 *param --> glazingPrice : price associated with the glaze; packPrice : price assocated with the number of rolls
 */
 function computePrice(glazingPrice, packPrice) {
-    const price = (( basePrice + glazingPrice) * packPrice).toFixed(2);
-    displayPrice(price);
+    const price = (( base + glazingPrice) * packPrice).toFixed(2);
+    displayPrice('$' + price);
 }
 
 /*
@@ -56,7 +69,7 @@ function onSelectGlazeChange(){
  */
 function onSelectSizeChange(){
     sizeValue = parseInt(this.value);
-    for ( i = 0; i < 4; i++){
+    for (let i = 0; i < 4; i++){
         if(sizeValue === packSize.option[i][0]){
             for (let j = 0; j < 4; j++){
                 if(glazing.option[j][0] === glazeValue){
@@ -64,6 +77,16 @@ function onSelectSizeChange(){
                 }
             }
         }
+    }
+}
+
+let cartCounter = 0;
+function onClickAddToCart(){
+    let currentRoll = new Roll(chosenRoll, glazeValue, sizeValue, base);
+    cart[cartCounter] = currentRoll;
+    cartCounter++;
+    for(let i = 0; i < cart.length; i ++){
+        console.log(Object.values(cart[i]));
     }
 }
 
@@ -79,4 +102,5 @@ const packSize = {
 //event listeners to call the change functions
 selectGlaze.addEventListener('change', onSelectGlazeChange);
 selectSize.addEventListener('change', onSelectSizeChange);
+addToCart.addEventListener('click', onClickAddToCart);
 

@@ -2,7 +2,7 @@ const basePrice = 2.49;
 
 let selectGlaze = document.querySelector('#flavors');
 let selectSize = document.querySelector('#amount');
-let glazeValue = 'Original';
+let glazeValue = 'Keep original';
 let sizeValue = 1;
 /*
 *This function computes the new price based on the selections made by the user
@@ -43,7 +43,7 @@ function onSelectGlazeChange(){
  */
 function onSelectSizeChange(){
     sizeValue = parseInt(this.value);
-    for ( i = 0; i < 4; i++){
+    for (let i = 0; i < 4; i++){
         if(sizeValue === packSize.option[i][0]){
             for (let j = 0; j < 4; j++){
                 if(glazing.option[j][0] === glazeValue){

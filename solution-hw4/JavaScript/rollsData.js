@@ -24,3 +24,5 @@ const rolls = {
         "imageFile": "strawberry-cinnamon-roll.jpg"
     }
 };
+
+export default rolls;
