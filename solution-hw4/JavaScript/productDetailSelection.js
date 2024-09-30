@@ -4,6 +4,7 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const chosenRoll = params.get('roll');
 
+//sets up all the elements that need to be changed based on the selected roll
 let sloganElement = document.querySelector('#detail-slogan');
 let priceElement = document.querySelector('#product-price');
 let pictureElement = document.querySelector('#product-photo');
@@ -15,6 +16,7 @@ pictureElement.src = '../assets/products/' + rolls[chosenRoll]["imageFile"];
 
 const cart = [];
 
+//Roll object for storing customer choices
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
@@ -25,12 +27,13 @@ class Roll {
 }
 
 
-
+//sets the base values for the different options
 let selectGlaze = document.querySelector('#flavors');
 let selectSize = document.querySelector('#amount');
 let addToCart = document.querySelector('#button-add-to-cart')
 let glazeValue = 'Keep original';
 let sizeValue = 1;
+
 /*
 *This function computes the new price based on the selections made by the user
 *param --> glazingPrice : price associated with the glaze; packPrice : price assocated with the number of rolls
@@ -80,6 +83,9 @@ function onSelectSizeChange(){
     }
 }
 
+/*
+* This function runs when a customer adds something to cart and prints the carts content to the console
+*/
 let cartCounter = 0;
 function onClickAddToCart(){
     let currentRoll = new Roll(chosenRoll, glazeValue, sizeValue, base);
@@ -99,7 +105,7 @@ const packSize = {
     option: [[1, 1.00], [3, 3.00], [6, 5.00], [12, 10.00]],
 };
 
-//event listeners to call the change functions
+//event listeners to call the event functions
 selectGlaze.addEventListener('change', onSelectGlazeChange);
 selectSize.addEventListener('change', onSelectSizeChange);
 addToCart.addEventListener('click', onClickAddToCart);
