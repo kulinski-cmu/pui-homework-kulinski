@@ -1,0 +1,322 @@
+/*styling for all the products on the product gallery*/
+div.product  {
+    display : flex;
+    flex-direction : column;
+    justify-content : space-around;
+    align-items : center;
+    padding : 10px;
+    border : 4px solid white;
+}
+
+/*styling for the navigation bar with the logo*/
+nav {
+    display : flex;
+    align-items : stretch;
+
+}
+
+/*container for the navigation links to line up correctly*/
+div.temp {
+    display : flex;
+    flex-direction : column;
+    align-items : flex-start;
+    justify-content : space-around;
+    width : 800px;
+}
+
+/*Styling for the navigation links*/
+div.nav-links {
+    display : flex;
+    flex-direction : row;
+    justify-content : flex-end;
+    border-bottom : 4px solid black;
+    width : 800px;
+}
+
+/*styling for the logo*/
+img.logo {
+    width : 400px;
+    height : 400px;
+    background-color : white;
+    padding : 10px;
+
+}
+
+/*styling for the product link on the product gallery and product detail pages*/
+a.product-link {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    font-size : 30px;
+    font-family : helvetica;
+    text-decoration : none;
+    background-color : yellow;
+    width : 120px;
+    margin : 30px;
+}
+
+/*styling for the product link on the shopping cart page*/
+a.product-link-notproduct{
+    display : flex;
+    font-size : 30px;
+    font-family : helvetica;
+    text-decoration : none;
+    margin : 30px;
+}
+
+/*stying for the shopping cart link on the product detail and product gallery page*/
+a.shopping-cart-notcart {
+    display : flex;
+    font-size : 30px;
+    font-family : helvetica;
+    text-decoration : none;
+    margin : 30px;
+}
+
+/*styling for the shopping cart link on the shopping cart page*/
+a.shopping-cart-cart {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    font-size : 30px;
+    font-family : helvetica;
+    text-decoration : none;
+    background-color : yellow;
+    width : 70px;
+    margin : 30px;
+}
+
+/*styling for the slogan present on the product gallery page*/
+p.slogan{
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    font-size : 30px;
+    font-family : helvetica;
+}
+/*general rule for all links*/
+a {
+    color : black;
+    font-family : helvetica;
+}
+
+/*styling for product links to the product detail page when hovering*/
+ div.product a:hover {
+    border : solid yellow;
+    background-color : yellow;
+    font-weight : bold;
+}
+
+/*container for the products on the product page*/
+div.product-layout {
+    display : flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+    justify-content : space-around;
+    margin : 30px;
+}
+
+/*styling for text on the product gallery page*/
+div.product p{
+    align-self : center;
+    font-size : 15px;
+    font-family : helvetica;
+    color : black;
+}
+
+/*adds the border to the product images*/
+div.product img {
+    border : 2px solid black;
+    width : 285px;
+    height : 285px;
+}
+
+div.original-cinnamon-roll-product img {
+    border : 2px solid black;
+    width : 600px;
+    height : 600px;
+}
+
+div.product-detail-page {
+    display : flex;
+    justify-content : space-evenly;
+}
+
+div.product-detail-page-text {
+    display : flex;
+    flex-direction : column;
+    justify-content : space-around;
+    align-items : baseline;
+    width : auto;
+}
+
+/*box for the information on the product detail page*/
+#textbox{
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+/*text within the textbox*/
+#product-description {
+    display : flex;
+    flex-direction : column;
+    width : 300px;
+    justify-content : center;
+    font-size : 30px;
+
+}
+
+/*formats the selection menus for the product detail page*/
+#selection{
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    font-size : 30px;
+}
+
+/*styling for the text withing the selection*/
+#selection p {
+    display : flex;
+    margin : 0px;
+    width : 300px;
+}
+
+/*styling for the selection boxes*/
+select {
+    width : 300px;
+    height : 50px;
+    font-size : 20px;
+    font-family : helvetica;
+    border : 2px solid black;
+}
+
+/*flex container for the contents of the shopping cart page*/
+div.shopping-cart {
+    display : flex;
+    padding-left : 400px;
+    padding-right : 70px;
+    justify-content : space-around;
+    width : 730px;
+}
+
+/*styling for the images on the shopping cart page*/
+div.product-cart img {
+    border : 2px solid black;
+    width : 285px;
+    height : 285px;
+}
+
+/*container for the text in the shopping cart page*/
+div.product-information {
+    display : flex;
+    flex-direction : column;
+}
+
+/*styling and container for the prices associated with the different items on the shopping cart page*/
+div.shopping-cart-price {
+    display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+    font-size : 22px;
+    font-family : helvetica;
+    margin-top : 80px;
+    margin-bottom : 220px;
+}
+
+/*styling for the text on the shopping cart page*/
+div.product-information p{
+    font-size : 22px;
+    font-family : helvetica;
+    padding : 10px;
+    margin : 10px;
+}
+
+/*styling for the remove "buttons" on the shopping cart page*/
+p.remove {
+    display : flex;
+    font-size : 30px;
+    font-weight : bold;
+    font-family : helvetica;
+    text-decoration : underline;
+    justify-content : flex-start;
+}
+
+/*formatting for the product information below each picture for the shopping cart page*/
+#product-information {
+    font-size : 18px;
+    font-family : helvetica;
+}
+
+/*container for the price and the checkout button*/
+#price-and-button {
+    display : flex;
+    flex-direction : row;
+    justify-content : center;
+}
+
+/*formatting for the text inside the footer of the product detail page*/
+#product-price {
+    display : flex;
+    align-items : center;
+    font-size : 30px;
+    font-family : helvetica;
+    font-weight : bold;
+}
+
+/*formatting for the add to cart button on the product detail page*/
+#button-add-to-cart {
+    border : 2px solid black;
+    background : yellow;
+    margin : 30px;
+    width : 160px;
+    height : 50px;
+    font-size : 25px;
+    font-family : helvetica;
+    font-weight : bold;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    justify-content : center;
+}
+
+/*formatting for the footer on the shopping cart page*/
+footer.shopping-cart-footer {
+    border-top : 4px solid black;
+    margin-left : 400px;
+    width : 730px;
+    display : flex;
+    flex-direction : column;
+    justify-content : flex-end;
+    align-items : flex-end;
+  
+}
+
+/*stying for the shopping cart total*/
+div.shopping-cart-total {
+    display : flex;
+    flex-direction : row;
+    width : 400px;
+    justify-content : space-between;
+}
+
+/*text inside the footer of the shopping cart page*/
+div.shopping-cart-total p{
+    font-size : 25px;
+    font-family : helvetica;
+}
+
+/*formatting for the checkout button on the shopping cart page*/
+div.button {
+    border : 1px solid black;
+    background : yellow;
+    width : 130px;
+    height : 50px;
+    font-size : 20px;
+    font-family : helvetica;
+    font-weight : bold;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+}
