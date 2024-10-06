@@ -216,13 +216,11 @@ div.product-information {
 
 /*styling and container for the prices associated with the different items on the shopping cart page*/
 div.shopping-cart-price {
-    display : flex;
-    flex-direction : column;
-    justify-content : space-between;
     font-size : 22px;
     font-family : helvetica;
     margin-top : 80px;
     margin-bottom : 220px;
+    padding-left : 200px;
 }
 
 /*styling for the text on the shopping cart page*/
@@ -241,6 +239,8 @@ button.remove {
     font-family : helvetica;
     text-decoration : underline;
     justify-content : flex-start;
+    background : none;
+    border : none;
 }
 
 /*formatting for the product information below each picture for the shopping cart page*/
@@ -320,4 +320,11 @@ div.button {
     flex-direction : column;
     justify-content : center;
     align-items : center;
+}
+
+div.roll-element {
+    display : flex;
+    justify-content: flex-end;
+    margin-left : 400px;
+    margin-right : 60px;
 }

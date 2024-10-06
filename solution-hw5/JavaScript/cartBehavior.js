@@ -1,8 +1,3 @@
-//let template = document.querySelector('#product-template');
-//let templateContent = template.content;
-//const productList = document.querySelector('#product-list');
-//productList.prepend(templateContent);
-
 let cart = [];
 
 const glazes = {
@@ -68,7 +63,7 @@ function createRoll(roll){
     let numOfRolls = roll.element.querySelector('#pack-size');
     picture.src =  '../assets/products/' + images[roll.type];
     name.innerText = roll.type;
-    glazeType.innerText = 'Glazing: ' + roll.glazing;
+    glazeType.innerText = roll.glazing;
     price.innerText = '$' + computePrice(roll);
     numOfRolls.innerText = 'Pack Size: ' + roll.size;
 
