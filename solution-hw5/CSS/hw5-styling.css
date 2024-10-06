@@ -220,7 +220,7 @@ div.shopping-cart-price {
     font-family : helvetica;
     margin-top : 80px;
     margin-bottom : 220px;
-    padding-left : 200px;
+    margin-left : 180px;
 }
 
 /*styling for the text on the shopping cart page*/
@@ -229,6 +229,7 @@ div.product-information p{
     font-family : helvetica;
     padding : 10px;
     margin : 10px;
+    width : 150px;
 }
 
 /*styling for the remove "buttons" on the shopping cart page*/
@@ -238,9 +239,9 @@ button.remove {
     font-weight : bold;
     font-family : helvetica;
     text-decoration : underline;
-    justify-content : flex-start;
     background : none;
     border : none;
+    padding : 0px;
 }
 
 /*formatting for the product information below each picture for the shopping cart page*/
@@ -324,7 +325,7 @@ div.button {
 
 div.roll-element {
     display : flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin-right : 50px;
     margin-left : 400px;
-    margin-right : 60px;
 }

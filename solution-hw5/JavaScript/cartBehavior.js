@@ -61,7 +61,9 @@ function createRoll(roll){
     let glazeType = roll.element.querySelector('#glaze');
     let price = roll.element.querySelector('#pack-price');
     let numOfRolls = roll.element.querySelector('#pack-size');
+
     picture.src =  '../assets/products/' + images[roll.type];
+    picture.alt = roll.type + ' cinnamon roll';
     name.innerText = roll.type;
     glazeType.innerText = roll.glazing;
     price.innerText = '$' + computePrice(roll);
