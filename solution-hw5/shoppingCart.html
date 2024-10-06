@@ -4,6 +4,7 @@
   <head>
   <title>Shopping Cart</title> <!--shows the user's selections-->
   <link rel="stylesheet" type="text/css" href="../solution-hw5/CSS/hw5-styling.css"/>
+  <script defer src="../solution-hw5/JavaScript/cartBehavior.js"></script>
   </head>
 
   <nav>
@@ -28,57 +29,40 @@
 
   <body>
     <!--shows the products the user has selected to purchase-->
-    <div class = "shopping-cart">
-      <div class="product-cart">
+    <div id = "product-list">
+      <template id = "product-template">
+        <div class = "roll-element">
+        <div class="product-cart">
         <br>
-        <img src="../assets/products/original-cinnamon-roll.jpg"
+        <img id = "image" src="../assets/products/original-cinnamon-roll.jpg"
             width="150"
             height="150"
             alt="original cinnamon roll">
         <p class = "remove">Remove</p>
-      
-        <img src="../assets/products/double-chocolate-cinnamon-roll.jpg"
-            width="150"
-            height="150"
-            alt="double-chocolate cinnamon roll">
-            <p class = "remove">Remove</p>
       </div>
         <!--shows the specific choices for this product-->
       <div class = "product-information">
-        <br>
-        <p>
+       
+        <p id = "name">
           Original Cinnamon Roll
         </p>
-        <p>Glazing: Keep original</p>
-        <p>Pack Size: 1</p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>      
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p>Double-Chocolate Cinnamon Roll</p>
-        <p>Glazing: Sugar milk</p>
-        <p>Pack Size: 6</p>
+        <p id = "glaze">Glazing: Keep original</p>
+        <p id = "pack-size">Pack Size: 1</p>
+    
       </div>
       <div class = "shopping-cart-price">
-        <p>$2.46</p>
-        <p>$27.45</p>
+        <p id = "pack-price">$2.46</p>
       </div>
     </div>
+  </template>
+</div>
   </body>
 
    <!--displays the price and checkout button-->
-  <footer class = "shopping-cart-footer">
+  <footer id = "shopping-cart-footer">
     <div class = "shopping-cart-total">
       <p>Total</p>
-      <p> $29.94</p>
+      <p id = "total-price"> $29.94</p>
     </div>
     <div class = "button">
       checkout

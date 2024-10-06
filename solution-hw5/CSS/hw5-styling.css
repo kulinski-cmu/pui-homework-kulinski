@@ -211,6 +211,7 @@ div.product-cart img {
 div.product-information {
     display : flex;
     flex-direction : column;
+    padding-top : 17px;
 }
 
 /*styling and container for the prices associated with the different items on the shopping cart page*/
@@ -281,7 +282,7 @@ p.remove {
 }
 
 /*formatting for the footer on the shopping cart page*/
-footer.shopping-cart-footer {
+#shopping-cart-footer {
     border-top : 4px solid black;
     margin-left : 400px;
     width : 730px;
