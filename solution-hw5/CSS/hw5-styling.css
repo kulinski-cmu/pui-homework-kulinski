@@ -234,7 +234,7 @@ div.product-information p{
 }
 
 /*styling for the remove "buttons" on the shopping cart page*/
-p.remove {
+button.remove {
     display : flex;
     font-size : 30px;
     font-weight : bold;

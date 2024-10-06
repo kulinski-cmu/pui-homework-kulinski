@@ -3,7 +3,7 @@
 //const productList = document.querySelector('#product-list');
 //productList.prepend(templateContent);
 
-const cart = [];
+let cart = [];
 
 const glazes = {
     "Original" : 0.00,
@@ -71,16 +71,40 @@ function createRoll(roll){
     glazeType.innerText = 'Glazing: ' + roll.glazing;
     price.innerText = '$' + computePrice(roll);
     numOfRolls.innerText = 'Pack Size: ' + roll.size;
+
+    const btnDelete = roll.element.querySelector('.remove');
+    btnDelete.addEventListener('click', () => {
+        deleteRoll(roll);
+    });
+}
+
+function deleteRoll(roll){
+    roll.element.remove();
+    newCart(roll);
+    totalPriceElement.innerText = '$' + computeTotal();
+}
+
+function newCart(roll){
+    const newCart = [];
+    let j = 0;
+    for(let i = 0; i < cart.length; i++){
+        if(roll.type != cart[i].type) {
+            newCart[j] = cart[i];
+            j++;
+        }
+    }
+    cart = newCart;
 }
 
 for(let i = cart.length-1; i >= 0; i--){
     createRoll(cart[i]);
 }
 
-let totalPrice = 0;
+
 function computeTotal(){
+    let totalPrice = 0.00;
     for(let i = 0; i < cart.length; i++){
-        totalPrice = totalPrice + parseInt(computePrice(cart[i]));
+        totalPrice = totalPrice + parseFloat(computePrice(cart[i]));
     }
     return totalPrice;
 }
