@@ -42,6 +42,11 @@ cart[1] = walnutRoll;
 cart[2] = raisinRoll;
 cart[3] = appleRoll;
 
+/**
+ * computes the price for the rolls in the pack
+ * @param roll object
+ * @returns the price
+ */
 function computePrice(roll){
     let glazePrice = glazes[roll.glazing];
     let packPrice = sizes[roll.size];
@@ -49,6 +54,10 @@ function computePrice(roll){
     return price;
 }
 
+/**
+ * creates a new instance of a roll and places it on the cart page
+ * @param roll object 
+ */
 function createRoll(roll){
     const template = document.querySelector('#product-template');
     const clone = template.content.cloneNode(true);
@@ -56,7 +65,7 @@ function createRoll(roll){
 
     const productList = document.querySelector('#product-list');
     productList.prepend(roll.element);
-   let picture = roll.element.querySelector('#image');
+    let picture = roll.element.querySelector('#image');
     let name = roll.element.querySelector('#name');
     let glazeType = roll.element.querySelector('#glaze');
     let price = roll.element.querySelector('#pack-price');
@@ -75,12 +84,20 @@ function createRoll(roll){
     });
 }
 
+/**
+ * removes the specified roll from the cart page
+ * @param roll object 
+ */
 function deleteRoll(roll){
     roll.element.remove();
     newCart(roll);
     totalPriceElement.innerText = '$' + computeTotal();
 }
 
+/**
+ * helper function that resizes the array based on the new number of rolls
+ * @param roll object
+ */
 function newCart(roll){
     const newCart = [];
     let j = 0;
@@ -93,11 +110,15 @@ function newCart(roll){
     cart = newCart;
 }
 
+/*adds the roll objects to the cart array*/
 for(let i = cart.length-1; i >= 0; i--){
     createRoll(cart[i]);
 }
 
-
+/**
+ * computes the total price of the cart
+ * @returns the total price of all the rolls
+ */
 function computeTotal(){
     let totalPrice = 0.00;
     for(let i = 0; i < cart.length; i++){

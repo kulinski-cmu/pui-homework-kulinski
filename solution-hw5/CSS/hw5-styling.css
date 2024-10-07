@@ -221,6 +221,7 @@ div.shopping-cart-price {
     margin-top : 80px;
     margin-bottom : 220px;
     margin-left : 180px;
+    align-self : flex-end;
 }
 
 /*styling for the text on the shopping cart page*/
