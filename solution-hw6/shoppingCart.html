@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <head>
+  <title>Shopping Cart</title> <!--shows the user's selections-->
+  <link rel="stylesheet" type="text/css" href="../solution-hw6/CSS/hw6-styling.css"/>
+  <script defer src="../solution-hw6/JavaScript/cartBehavior.js"></script>
+  </head>
+
+  <nav>
+    <a href = "../solution-hw6/index.html">
+      <img class = "logo" src = "../assets/logo/logo-01.svg"
+      alt = "BunBun shop logo"/>
+    </a>
+    <div class = "temp">
+      <div class = "nav-links">
+        <a class = "product-link-notproduct" href = "../solution-hw6/index.html">
+        Products
+        </a>
+        <a class = "shopping-cart-cart" href = "shoppingCart.html">
+        Cart
+        </a>
+      </div>
+      <p class = "slogan">Our hand-made cinnamon rolls 
+        <br>
+      </p>
+    </div>
+  </nav>
+
+  <body>
+    <!--shows the products the user has selected to purchase-->
+    <div id = "product-list">
+      <template id = "product-template">
+        <div class = "roll-element">
+        <div class="product-cart">
+        <br>
+        <img id = "image" src="../assets/products/original-cinnamon-roll.jpg"
+            alt="original cinnamon roll">
+        <button type = "button" class = "remove">Remove</button>
+      </div>
+        <!--shows the specific choices for this product-->
+      <div class = "product-information">
+       
+        <p id = "name">
+          Original Cinnamon Roll
+        </p>
+        <p id = "glaze">Glazing: Keep original</p>
+        <p id = "pack-size">Pack Size: 1</p>
+    
+      </div>
+      <div class = "shopping-cart-price">
+        <p id = "pack-price">$2.46</p>
+      </div>
+    </div>
+  </template>
+</div>
+  </body>
+
+   <!--displays the price and checkout button-->
+  <footer id = "shopping-cart-footer">
+    <div class = "shopping-cart-total">
+      <p>Total</p>
+      <p id = "total-price"> $29.94</p>
+    </div>
+    <div class = "button">
+      checkout
+    </div>
+  </footer>
+
+</html>
