@@ -86,11 +86,10 @@ function onSelectSizeChange(){
 /*
 * This function runs when a customer adds something to cart and prints the carts content to the console
 */
-let cartCounter = 0;
 function onClickAddToCart(){
     let currentRoll = new Roll(chosenRoll, glazeValue, sizeValue, base);
-    cart[cartCounter] = currentRoll;
-    cartCounter++;
+    cart.push(currentRoll);
+   console.log(cart.length);
     for(let i = 0; i < cart.length; i ++){
         console.log(Object.values(cart[i]));
     }
@@ -112,7 +111,20 @@ function saveToLocalStorage(){
     localStorage.setItem('storedRolls', rollArrayString);
 }
 
+function retrieveFromLocalStorage(){
+    const rollArrayString = localStorage.getItem('storedRolls');
+    const rollArray = JSON.parse(rollArrayString);
+    for (const rollData of rollArray){
+        const newRoll = new Roll(rollData.type, rollData.glazing, rollData.size, rollData.basePrice);
+        cart.push(newRoll);
+    }
+}
+    
+
 //event listeners to call the event functions
 selectGlaze.addEventListener('change', onSelectGlazeChange);
 selectSize.addEventListener('change', onSelectSizeChange);
 addToCart.addEventListener('click', onClickAddToCart);
+if(localStorage.getItem('storedRolls') !== null){
+    retrieveFromLocalStorage();
+}
