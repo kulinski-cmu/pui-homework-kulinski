@@ -87,9 +87,13 @@ function onSelectSizeChange(){
 * This function runs when a customer adds something to cart and prints the carts content to the console
 */
 function onClickAddToCart(){
+    if (localStorage.getItem('storedRolls') === null){
+        while (cart.length > 0){
+            cart.pop();
+        }
+    }
     let currentRoll = new Roll(chosenRoll, glazeValue, sizeValue, base);
     cart.push(currentRoll);
-   console.log(cart.length);
     for(let i = 0; i < cart.length; i ++){
         console.log(Object.values(cart[i]));
     }
@@ -105,12 +109,18 @@ const packSize = {
     option: [[1, 1.00], [3, 3.00], [6, 5.00], [12, 10.00]],
 };
 
+/*
+*saves the roll selected to the local storage
+ */
 function saveToLocalStorage(){
     const rollArray = Array.from(cart);
     const rollArrayString = JSON.stringify(rollArray);
     localStorage.setItem('storedRolls', rollArrayString);
 }
 
+/*
+*takes any rolls currently stored locally and adds them to the cart array
+*/
 function retrieveFromLocalStorage(){
     const rollArrayString = localStorage.getItem('storedRolls');
     const rollArray = JSON.parse(rollArrayString);

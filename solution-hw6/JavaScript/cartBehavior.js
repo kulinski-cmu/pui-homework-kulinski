@@ -1,10 +1,10 @@
 let cart = [];
 
 const glazes = {
-    "Original" : 0.00,
-    "Sugar Milk" : 0.00,
-    "Vanilla Milk" : 0.50,
-    "Double Chocolate" : 1.50,
+    "Keep original" : 0.00,
+    "Sugar milk" : 0.00,
+    "Vanilla milk" : 0.50,
+    "Double chocolate" : 1.50,
 };
 
 const sizes = {
@@ -19,6 +19,8 @@ const images = {
     'Walnut' : 'walnut-cinnamon-roll.jpg',
     'Raisin' : 'raisin-cinnamon-roll.jpg',
     'Apple' : 'apple-cinnamon-roll.jpg',
+    'Strawberry' : 'strawberry-cinnamon-roll.jpg',
+    'Double-Chocolate' : 'double-chocolate-cinnamon-roll.jpg',
 };
 
 class Roll{
@@ -31,16 +33,6 @@ class Roll{
         this.element = null;
     }
 }
-
-const originalRoll = new Roll("Original","Sugar Milk", "1", 2.49);
-const walnutRoll = new Roll("Walnut", "Vanilla Milk", "12", 3.49);
-const raisinRoll = new Roll("Raisin", "Sugar Milk", "3", 2.99);
-const appleRoll = new Roll("Apple", "Original", "3", 3.49);
-
-cart[0] = originalRoll;
-cart[1] = walnutRoll;
-cart[2] = raisinRoll;
-cart[3] = appleRoll;
 
 /**
  * computes the price for the rolls in the pack
@@ -77,6 +69,7 @@ function createRoll(roll){
     glazeType.innerText = roll.glazing;
     price.innerText = '$' + computePrice(roll);
     numOfRolls.innerText = 'Pack Size: ' + roll.size;
+    totalPriceElement.innerText = '$' + computeTotal();
 
     const btnDelete = roll.element.querySelector('.remove');
     btnDelete.addEventListener('click', () => {
@@ -92,6 +85,18 @@ function deleteRoll(roll){
     roll.element.remove();
     newCart(roll);
     totalPriceElement.innerText = '$' + computeTotal();
+    for(let i = 0; i < cart.length; i++){
+        console.log(cart[i]);
+    }
+}
+
+/** 
+ * saves the rolls without the removed roll
+ */
+function saveToLocalStorage(){
+    const rollArray = Array.from(cart);
+    const rollArrayString = JSON.stringify(rollArray);
+    localStorage.setItem('storedRolls', rollArrayString);
 }
 
 /**
@@ -101,18 +106,17 @@ function deleteRoll(roll){
 function newCart(roll){
     const newCart = [];
     let j = 0;
+    let rollRemoved = false;
     for(let i = 0; i < cart.length; i++){
-        if(roll.type != cart[i].type) {
+        if(roll.type != cart[i].type || rollRemoved === true) {
             newCart[j] = cart[i];
             j++;
+        } else {
+            rollRemoved = true;
         }
     }
     cart = newCart;
-}
-
-/*adds the roll objects to the cart array*/
-for(let i = cart.length-1; i >= 0; i--){
-    createRoll(cart[i]);
+    saveToLocalStorage();
 }
 
 /**
@@ -124,8 +128,23 @@ function computeTotal(){
     for(let i = 0; i < cart.length; i++){
         totalPrice = totalPrice + parseFloat(computePrice(cart[i]));
     }
-    return totalPrice;
+    return totalPrice.toFixed(2);
+}
+
+/**
+ * adds the rolls stored in local storage to the checkout page
+ */
+function retrieveFromLocalStorage(){
+    const rollArrayString = localStorage.getItem('storedRolls');
+    const rollArray = JSON.parse(rollArrayString);
+    for (const rollData of rollArray){
+        const newRoll = new Roll(rollData.type, rollData.glazing, rollData.size, rollData.basePrice);
+        cart.push(newRoll);
+        createRoll(newRoll);
+    }
 }
 
 const totalPriceElement = document.querySelector('#total-price');
-totalPriceElement.innerText = '$' + computeTotal();
+if(localStorage.getItem('storedRolls') !== null){
+    retrieveFromLocalStorage();
+}
