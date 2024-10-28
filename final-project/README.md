@@ -204,7 +204,7 @@ How would you use Generative AI responsibly?
 
 ### *Idea 1: Museum Website*
 
-![title for sketch1](images/sketch1.png)
+![3 screens for the museum website. Displayed from top to bottom: a welcome page that will hold general information about the website and how it works; what an exhibit will look like; the navigation menu meant to look like a museum map.](musuem-website.JPG)
 
 The basic idea is to be able to experience the feeling of exploring a museum from a website. The website would function by letting the user explore a museum space and look at different exhibits. 
 
@@ -217,6 +217,8 @@ I want this website to display dinosaur information, such as specific informatio
 
 ### *Idea 2: Cross Stitch Pattern Maker*
 
+![3 screens for the cross stitch website. Displayed from top to bottom: the main screen with a grid that allows you to edit the pattern and a box with all the colors picked for that project; the screen for adding new colors to a project; display that allows users to chose, edit, and look at past designs.](cross-stich-website.JPG)
+
 The idea of this website is to allow users to design cross stitch patterns. This will include seeing all of the DMC, a specific embroidery thread maker, colors and having a place to edit their designs. 
 
 The main interaction would be placing stitches in the work space, which is the grid seen in the first screen. Users would be able to place a stitch per box. The second interaction will be choosing colors, and users will be able to look up a color by number, color group, or name, which is how DMC allows for searching on their website as well. 
@@ -226,6 +228,8 @@ One way I plan on making the design accessible is by using coding techniques tha
 I want this website to display information about the pattern that people are making. When designing a project, it’s important to see how the different colors will look together and how the design looks overall. This information can be difficult to convey depending on how you try to display the grid.
 
 ### *Idea 3: Personal Website*
+
+![3 screens for the personal website. Displayed from top to bottom: a main page that describes who I am; a page that displays information about what work I did during my udergraduate experinces; a page that displays information about what work I did during my graduate experiences.](person-website.JPG)
 
 The idea of this website is to convey information about the things that I have done and completed.
 
