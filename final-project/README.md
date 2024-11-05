@@ -125,7 +125,7 @@ Remember to keep track of your prompts and usage for [FP4 writeup](#part-6-gener
 
 ## Project Description
 
-Briefly restate your motivation and a short description of your project.
+This project is a cross stitch pattern maker. This will allow crafters to make their own patterns and base patterns off of pictures. The main motivation for this project is that there is not currently a strong platform to allow people to make their own projects. Crafters want to make things that speak to them, which includes the process of pattern making.
 
 ## High-Fi Prototypes
 
@@ -150,6 +150,9 @@ Show screenshots of your updated design based on the user feedback (\<100 words,
 ## Feedback Summary
 
 Summarize the feedback you received in the lab session and discuss how it influenced your design (\~300 words). 
+One piece of feedback I recieved was to better distinguish the buttons on the design. This includes both distinguishing what page you are on through the buttons and differetiating the different types of buttons. Even though the buttons all do different things, in my updated design, they all look mostly the same. This feedback will infulence my design since I will change some of the components to better communicate inforamtion to the user. Previously, I was focusing mostly on the aesthic of the website, which wouldn't be useful to the user if they couldn't understand where they are within the page.
+
+A second piece of feedback that I recieved is adding a back or undo button as part of the pattern design page. This would allow users to undo actions and go back to the previous pattern. This will influence my design because it will help users to better recover from choices and how they interact with their project. I will put this into my design and I will also spend time considering using a eraser method as well. 
 
 ## Milestones
 
@@ -157,16 +160,30 @@ Outline weekly milestones to plan your expected implementation progress until th
 
 ### *Implementation Plan*
 
-- [ ] Week 9 Oct 28 \- Nov 1:
+- [x] Week 9 Oct 28 \- Nov 1:
   - [X] FP1 due
-  - [ ] ...
   
 - [ ] Week 10 Nov 4 \- Nov 8:   
-  - [ ] FP2 due
+  - [x] FP2 due
+  - [ ] begin implementing layout of new pattern page
 
-- [ ] Week 11 Nov 11 \- Nov 15:  
-- [ ] Week 12 Nov 18 \- Nov 22:   
-- [ ] Week 13 Nov 25 \- Nov 29:  
+- [ ] Week 11 Nov 11 \- Nov 15:
+  - [ ] finish implementing layout of "New Pattern" page
+  - [ ] begin implementing layout of "My Patterns" page
+  - [ ] begin implementing layout of "Learn" page
+  - [ ] finish implementing layout of "My Patterns" page
+  - [ ] finish implementing layout of "Learn" page
+          
+- [ ] Week 12 Nov 18 \- Nov 22:
+  - [ ] implement behavior for "My Patterns" page
+  - [ ] implement behavior for "Learn" page
+  - [ ] implement the "Add color" function on the "New Pattern" page
+        
+- [ ] Week 13 Nov 25 \- Nov 29:
+  - [ ] implement the grid functionality
+  - [ ] implement saving to a pdf function
+  - [ ] implement uploading images
+  - [ ] implement ability to edit images  
 
   - [ ] Thanksgiving  
 - [ ] Week 14 Dec 2 \- Dec 6:  
@@ -174,29 +191,26 @@ Outline weekly milestones to plan your expected implementation progress until th
 
 ### *Libraries and Other Components*
 
-List the JS libraries and other components (if applicable) that you plan to use. 
-* 
+* Jimp.js
+* jspdf.node*.js
+* autoComplete.js
 
 
 ## Generative AI Use Plan
 
-Outline how you plan to use Generative AI tools to aid in the implementation (\~300 words).
+I do not currently plan to use AI in my implementation. In order to fully understand how my code works and gain the most information from this class, I believe that working on the code entirely on my own is valuable. This includes all portions of the project, including testing. The best way to learn how to do something is to actually do it, not try and figure out how an AI system completed it. While I understand that this method and mindset my hold me back, I do not believe that I am in a place to utilize AI well within the scope of my project. 
+
+If I decide to use generative AI, it will be with writing the content of the learn pages as that is not the main focus of the project. Using the information that generative AI provides to assist with making text seems more reasonable than using generative AI to aid in writing code. 
 
 ### *Tool Use*
 
- What would you use? Edit the list given your plan. For each tool, explain briefly on what do you expect Generative AI to help you with and what might it not be able to help you with.
-
 * ChatGPT  
-  * I will use it for … because it can help me …  
-  * I will not use it for … because it might not be able to help me with …   
-* GitHub Copilot  
-* ...
+  * I might use it for helping to writing instructions on how to cross stitch and read patterns because it can help me use language that a novice can understand. It could help me to restate sections or prhase thoughts in a way more accessible to people.
+  * I will not use it for coding because it might not be able to help me with actually understanding how to do the work. ChatGPT does not cite its work or thought process, so it can be difficult to understand how the code works or why it would suggest it. You need to be extremely careful when using code from generative AI and I believe I will gain more from writing the code myself.   
 
 ### *Responsible Use*
 
-How would you use Generative AI responsibly? 
-
----
+If I choose to use generative AI, I will cite it in any place that I use it. The use of generative AI should be cited the same as any other information that you referecence in your work. In addition, I will check the validity of the information that it provides. I will not just copy and paste outputs into my work without understanding what was given and being able to explain that information.
 
 # **FP1 \- Proposal for Critique**
 
