@@ -141,8 +141,10 @@ A brief description and summary of the user feedback (\<100 words, 2 images)
 
 ## Usability Test
 
-Discuss the user feedback you got during the evaluation / usability test (\~300 words). Indicate which feedback you implemented, inspired new directions, or otherwise influenced your final design. 
-For my usability testing I used a Wizard of Oz methodology. To do this, I showed
+For my usability testing I used a Wizard of Oz methodology. To do this, I showed the user the pattern page first and asked them to complete 4 tasks. First, they were asked to make the "MOCK" pattern based on a guide that I provided them. Second, I asked them to add new colors to their project. Third, I asked them find information about how to read a project. Lastly, I asked them to return to the project that they had previously worked on.
+
+One of the main pieces of feedback that I recieved showed that some portions of the navigation was confusing. This was due to the lack of information about which page the user is currently on. This is something that I want to consider for my final version and incoproprated into the next design. 
+
 ## Updated Designs
 
 ![3 screens for the project that have been updated based on feedback given during usability testing. From left to right: new pattern screen, previously made patterns, and a learn page.](updated-ui.JPG)
