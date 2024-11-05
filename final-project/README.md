@@ -131,13 +131,14 @@ This project is a cross stitch pattern maker. This will allow crafters to make t
 
 ### *Prototype 1*
 
-![title for prototype1](images/prototype1.png)
+![First prototype for CrossStitch Maker](prototype-1-1.JPG) ![First prototype for CrossStitch Maker](prototype-1-2.JPG)
 
-A brief description and summary of the user feedback (\<100 words, 2 images) 
+The new pattern screen of this prototype was considered too bulky by the users. They noted that as projects grew and grew, it would be harder to figure out where you are on the grid. Additionally, the buttons for adding rows or columns would be constantly shifting. 
 
 ### *Prototype 2*
 
-…
+![Second prototype for CrossStitch Maker](prototype-2.JPG)
+This prototype was better recieved and the prototype that I used for the usability testing. Users liked that the buttons above the grid would not move as the grid increased or decreased.
 
 ## Usability Test
 
@@ -157,8 +158,6 @@ One piece of feedback I recieved was to better distinguish the buttons on the de
 A second piece of feedback that I recieved is adding a back or undo button as part of the pattern design page. This would allow users to undo actions and go back to the previous pattern. This will influence my design because it will help users to better recover from choices and how they interact with their project. I will put this into my design and I will also spend time considering using a eraser method as well. 
 
 ## Milestones
-
-Outline weekly milestones to plan your expected implementation progress until the end of the semester (\~300 words). 
 
 ### *Implementation Plan*
 
