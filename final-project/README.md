@@ -142,14 +142,14 @@ A brief description and summary of the user feedback (\<100 words, 2 images)
 ## Usability Test
 
 Discuss the user feedback you got during the evaluation / usability test (\~300 words). Indicate which feedback you implemented, inspired new directions, or otherwise influenced your final design. 
-
+For my usability testing I used a Wizard of Oz methodology. To do this, I showed
 ## Updated Designs
 
-Show screenshots of your updated design based on the user feedback (\<100 words, \~2 images).
+![3 screens for the project that have been updated based on feedback given during usability testing. From left to right: new pattern screen, previously made patterns, and a learn page.](Updated UI.jpg)
+Based on the feedback I recieved during the usability testing, I updated the screens to include backgrounds behind the images of the second and third screens. Users indicated that this would help to understand where to click and the fact that these images are distinct objects. I also edited the buttons in the navigation to help users understand where they are and recover from potential errors.
 
 ## Feedback Summary
 
-Summarize the feedback you received in the lab session and discuss how it influenced your design (\~300 words). 
 One piece of feedback I recieved was to better distinguish the buttons on the design. This includes both distinguishing what page you are on through the buttons and differetiating the different types of buttons. Even though the buttons all do different things, in my updated design, they all look mostly the same. This feedback will infulence my design since I will change some of the components to better communicate inforamtion to the user. Previously, I was focusing mostly on the aesthic of the website, which wouldn't be useful to the user if they couldn't understand where they are within the page.
 
 A second piece of feedback that I recieved is adding a back or undo button as part of the pattern design page. This would allow users to undo actions and go back to the previous pattern. This will influence my design because it will help users to better recover from choices and how they interact with their project. I will put this into my design and I will also spend time considering using a eraser method as well. 
