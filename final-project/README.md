@@ -145,7 +145,7 @@ Discuss the user feedback you got during the evaluation / usability test (\~300 
 For my usability testing I used a Wizard of Oz methodology. To do this, I showed
 ## Updated Designs
 
-![3 screens for the project that have been updated based on feedback given during usability testing. From left to right: new pattern screen, previously made patterns, and a learn page.](Updated UI.jpg)
+![3 screens for the project that have been updated based on feedback given during usability testing. From left to right: new pattern screen, previously made patterns, and a learn page.](updated-ui.JPG)
 Based on the feedback I recieved during the usability testing, I updated the screens to include backgrounds behind the images of the second and third screens. Users indicated that this would help to understand where to click and the fact that these images are distinct objects. I also edited the buttons in the navigation to help users understand where they are and recover from potential errors.
 
 ## Feedback Summary
