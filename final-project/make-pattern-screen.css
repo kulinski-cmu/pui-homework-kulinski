@@ -1,0 +1,64 @@
+#add-new-color {
+    display : flex;
+    flex-direction : column;
+    border : 4px;
+    height: 600px;
+    width: 250px;
+    border-style : solid;
+    border-color : black;
+    justify-content : space-between;
+}
+
+#color-title {
+    display: flex;
+    align-self : center;
+    font-weight : bold;
+    font-size : 20px;
+}
+
+#new-color-button {
+    display: flex;
+    align-self: center;
+    justify-content : center;
+    background-color: #376A3E;
+    color: white;
+    width: 120px;
+    margin : 30px;
+    padding : 6px;
+    border-radius : 6px;
+}
+
+div.color-option {
+    display : flex;
+    width : 190px;
+    align-self : center;
+    justify-content : space-between;
+}
+
+#color-square {
+    width : 45px;
+    height : 45px;
+    border : 2px;
+    border-style : solid;
+    border-color : black;
+    background : red;
+}
+
+div.color-list { 
+    display : flex;
+    flex-wrap : wrap;
+    flex-direction : column;
+    justify-content : space-around;
+}
+
+#number {
+    display : flex;
+    width : 30px;
+    justify-content : flex-end;
+}
+
+#name {
+    display : flex;
+    flex-wrap : wrap;
+    width : 110px;
+}
