@@ -9,6 +9,14 @@
     justify-content : space-between;
 }
 
+header {
+    display : flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+    align-content : baseline;
+    height : 200px;
+}
+
 #color-title {
     display: flex;
     align-self : center;
@@ -16,7 +24,7 @@
     font-size : 20px;
 }
 
-#new-color-button {
+div.button {
     display: flex;
     align-self: center;
     justify-content : center;
@@ -25,23 +33,22 @@
     width: 120px;
     margin : 30px;
     padding : 6px;
-    border-radius : 6px;
+    border-radius : 10px;
 }
 
 div.color-option {
     display : flex;
-    width : 190px;
+    width : 210px;
     align-self : center;
     justify-content : space-between;
 }
 
-#color-square {
+div.color-square {
     width : 45px;
     height : 45px;
     border : 2px;
     border-style : solid;
     border-color : black;
-    background : red;
 }
 
 div.color-list { 
@@ -55,10 +62,74 @@ div.color-list {
     display : flex;
     width : 30px;
     justify-content : flex-end;
+    padding : 3px;
 }
 
 #name {
     display : flex;
     flex-wrap : wrap;
     width : 110px;
+    margin-left : 3px;
+}
+
+#right-header {
+    display : flex;
+    flex-direction : row;
+    width: 750px;
+    justify-content : flex-end;
+}
+
+#round {
+    width : 40px;
+    height : 40px;
+    border-radius : 40px;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+#page {
+    display : flex;
+    flex-direction : row;
+}
+
+#right-of-page {
+    display : flex;
+    flex-direction : column;
+    width : 1000px;
+}
+
+#right-side-buttons {
+    display : flex;
+    flex-direction : row;
+    justify-content : flex-end;
+}
+
+#upload-button {
+    margin-left : 420px;
+}
+
+/*to change later*/
+#one{
+    background-color : #552014;
+}
+
+#two {
+    background-color : #3A553B;
+}
+
+#three {
+    background-color : #F6EFDA;
+}
+
+#four {
+    background-color : #B26923;
+}
+
+#five {
+    background-color : #60391D;
+}
+
+#six {
+    background-color : #383A2A;
 }
