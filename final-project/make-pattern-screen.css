@@ -109,6 +109,12 @@ div.color-list {
     margin-left : 420px;
 }
 
+img.temp {
+    width : 900px;
+    height : 500px;
+    padding-left : 60px;
+}
+
 /*to change later*/
 #one{
     background-color : #552014;
