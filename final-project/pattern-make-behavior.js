@@ -12,7 +12,20 @@ class Thread{
     }
 }
 
-const colors = ["Cocoa- Very Dark", "Green", "Pistachio Green - Very Dark", "Cream", "Topaz - Dark", "Coffee Brown - Dark", "Avocado Green - Dark"]; 
+let addNewColorButton = document.querySelector('#new-color-button');
+
+const myPopup = new Popup ({
+    id : "color-add",
+    title : "Choose a New Color to Add",
+    content : `
+    {btn-enter}[enter a color name]`,
+});
+
+function onClickAddNewColor(){
+    myPopup.show();
+}
+
+const colors = []; 
 
 function createColor(thread) {
     const template = document.querySelector('.color-option');
@@ -29,3 +42,5 @@ function createColor(thread) {
         number.innerText =threadColorsByName[colors[i]].number;
         color.style.color = threadColorsByName[colors[i]].hex;
 }
+
+addNewColorButton.addEventListener('click', onClickAddNewColor);
