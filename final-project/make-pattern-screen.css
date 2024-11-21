@@ -47,6 +47,7 @@ div.color-square {
     width : 45px;
     height : 45px;
     border : 2px;
+    background-color : white;
     border-style : solid;
     border-color : black;
 }
@@ -113,29 +114,4 @@ img.temp {
     width : 900px;
     height : 500px;
     padding-left : 60px;
-}
-
-/*to change later*/
-#one{
-    background-color : #552014;
-}
-
-#two {
-    background-color : #3A553B;
-}
-
-#three {
-    background-color : #F6EFDA;
-}
-
-#four {
-    background-color : #B26923;
-}
-
-#five {
-    background-color : #60391D;
-}
-
-#six {
-    background-color : #383A2A;
 }

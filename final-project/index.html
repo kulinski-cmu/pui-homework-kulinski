@@ -4,6 +4,7 @@
   <head>
     <script type = "module" defer src="../final-project/pattern-make-behavior.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.2/popup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" type="text/css" href="make-pattern-screen.css"/>
   </head>
 
@@ -27,18 +28,19 @@
 <div id = "add-new-color">
   <p id = "color-title">Colors In This Project</p>
   <div class = "color-list">
+    <template id = "color-template">
   <div class = "color-option">
     <div>
       <p id = "number">9</p>
     </div>
-    <div class = "color-square" id = "one"></div>
+    <div class = "color-square"></div>
       <div>
           <p id = "name">Cocoa - Very Dark</p>
       </div>
     </div>
-  
+  </template>
 
-  <div class = "color-option">
+  <!--- <div class = "color-option">
     <div>
       <p id = "number">163</p>
     </div>
@@ -88,7 +90,7 @@
                   <p id = "name">Avocado Green - Dark</p>
               </div>
             </div>
-
+          -->
   </div>
   <div class = "button" id = "new-color-button">
     Add New Color
