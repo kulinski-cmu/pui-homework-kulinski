@@ -92,12 +92,14 @@ div.color-list {
 #page {
     display : flex;
     flex-direction : row;
+    justify-content : space-around;
 }
 
 #right-of-page {
     display : flex;
     flex-direction : column;
     width : 1000px;
+    height : 90px;
 }
 
 #right-side-buttons {
@@ -115,3 +117,8 @@ img.temp {
     height : 500px;
     padding-left : 60px;
 }
+
+div.color-option:hover {
+    background-color : #C5C9C8;
+}
+

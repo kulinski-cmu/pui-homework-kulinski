@@ -3,14 +3,13 @@ import threadColorsByName from './threadColors.js';
 class Thread{
     constructor(name) {
         this.name = name;
-        //this.hex = hex;
-        //this.number = number;
-        
+    
         this.element = null;
     }
 }
 
 let addNewColorButton = document.querySelector('#new-color-button');
+
 const colors = []; 
 let currentColor = 'test';
 const userInput = 'Cocoa - Very Dark';
@@ -42,8 +41,6 @@ function onClickAddNewColor(){
     popup.show();
 }
 
-
-
 function createColor(thread) {
     const template = document.querySelector('#color-template');
     const clone = template.content.cloneNode(true);
@@ -55,13 +52,26 @@ function createColor(thread) {
     let number = thread.element.querySelector('#number');
     let color = thread.element.querySelector('.color-square');
 
-        name.innerText = thread.name;
-        number.innerText =threadColorsByName[thread.name].number;
-        color.style.backgroundColor = threadColorsByName[thread.name].hex;
+    name.innerText = thread.name;
+    number.innerText =threadColorsByName[thread.name].number;
+    color.style.backgroundColor = threadColorsByName[thread.name].hex;
+
+    thread.element.addEventListener('click', () => {
+        currentColor = thread.element.querySelector('#name');
+        console.log(currentColor);
+    });
 }
+
+var graphPaper = new Graphpaper();
+
+document.querySelector("#right-of-page").appendChild(graphPaper.element);
+
+
+
 
 
 addNewColorButton.addEventListener('click', onClickAddNewColor);
+
 colors[0] = new Thread('Cocoa - Very Dark');
 colors[1] = new Thread("Tender Green - Very Light");
 createColor(colors[0]);

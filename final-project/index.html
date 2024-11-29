@@ -5,6 +5,8 @@
     <script type = "module" defer src="../final-project/pattern-make-behavior.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.2/popup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/graphpaper@0.6.0/src/graphpaper.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="make-pattern-screen.css"/>
   </head>
 
@@ -25,85 +27,32 @@
     </div>
   </header>
 <div id = "page">
-<div id = "add-new-color">
-  <p id = "color-title">Colors In This Project</p>
-  <div class = "color-list">
-    <template id = "color-template">
-  <div class = "color-option">
-    <div>
-      <p id = "number">9</p>
-    </div>
-    <div class = "color-square"></div>
-      <div>
-          <p id = "name">Cocoa - Very Dark</p>
-      </div>
-    </div>
-  </template>
-
-  <!--- <div class = "color-option">
-    <div>
-      <p id = "number">163</p>
-    </div>
-    <div class = "color-square" id = "two"></div>
-      <div>
-          <p id = "name">Pistachio Green - Very Dark</p>
-      </div>
-    </div>
-  
-    <div class = "color-option">
-      <div>
-        <p id = "number">712</p>
-      </div>
-      <div class = "color-square" id = "three"></div>
-        <div>
-            <p id = "name">Cream</p>
-        </div>
-      </div>
-
-      <div class = "color-option">
-        <div>
-          <p id = "number">782</p>
-        </div>
-        <div class = "color-square" id = "four"></div>
-          <div>
-              <p id = "name">Topaz - Dark</p>
-          </div>
-        </div>
-
+  <div id = "add-new-color">
+    <p id = "color-title">Colors In This Project</p>
+    <div class = "color-list">
+      <template id = "color-template">
         <div class = "color-option">
           <div>
-            <p id = "number">801</p>
+            <p id = "number">9</p>
           </div>
-          <div class = "color-square" id = "five"></div>
+          <div class = "color-square"></div>
             <div>
-                <p id = "name">Coffee Brown - Dark</p>
+              <p id = "name">Cocoa - Very Dark</p>
             </div>
           </div>
-
-
-          <div class = "color-option">
-            <div>
-              <p id = "number">935</p>
-            </div>
-            <div class = "color-square" id = "six"></div>
-              <div>
-                  <p id = "name">Avocado Green - Dark</p>
-              </div>
-            </div>
-          -->
-  </div>
-  <div class = "button" id = "new-color-button">
-    Add New Color
-  </div>
-</div> 
+          </div>
+          </div>
+      </template>
+    </div>
+    <div class = "button" id = "new-color-button">
+      Add New Color
+    </div>
+  </div> 
 <div id = "right-of-page">
   <div id = "right-side-buttons">
   <div class = "button"> rows</div>
   <div class = "button">columns</div>
   <div class = "button" id = "upload-button">upload new photo</div>
-  </div>
-  <div>
-    <img class = "temp" src = "../final-project/pattern-template.jpg">
   </div>
 </div> 
 </div>
