@@ -8,6 +8,12 @@ class Thread{
     }
 }
 
+class Square{
+    constructor(){
+        this.element = null;
+    }
+}
+
 let addNewColorButton = document.querySelector('#new-color-button');
 
 const colors = []; 
@@ -58,21 +64,69 @@ function createColor(thread) {
 
     thread.element.addEventListener('click', () => {
         currentColor = thread.element.querySelector('#name');
-        console.log(currentColor);
     });
 }
 
-var graphPaper = new Graphpaper();
+function createGridRows(){
+    const template = document.querySelector('#pattern-template');
+    const clone = template.content.cloneNode(true);
+    const square = new Square();
+    square.element = clone.querySelector('.square');
 
-document.querySelector("#right-of-page").appendChild(graphPaper.element);
+        document.querySelector('#square-div').append(square.element);
+    
 
+    square.element.addEventListener('click', () => {
+        square.element.style.backgroundColor = threadColorsByName[currentColor.innerText].hex;
+    });
+}
 
+let clickIncreaseRows = document.querySelector('#upRows');
+let clickDecreaseRows = document.querySelector("#downRows");
+let clickIncreaseCols = document.querySelector("#upCols");
+let clickDecreaseCols = document.querySelector('#downCols');
+
+let rowsAmount = document.querySelector("#numberRow");
+let colsAmount = document.querySelector("#numberCols");
+
+function onChangeRowsUp(){
+    let rowsNum = parseInt(rowsAmount.innerText);
+    rowsNum++;
+    rowsAmount.innerText =rowsNum;
+    createGridRows();
+}
+
+function onChangeRowsDown(){
+    let rowsNum = parseInt(rowsAmount.innerText);
+    rowsNum--;
+    rowsAmount.innerText =rowsNum;
+}
+
+function onChangeColsUp(){
+    let colsNum = parseInt(colsAmount.innerText);
+    colsNum++;
+    colsAmount.innerText =colsNum;
+}
+
+function onChangeColsDown(){
+    let colsNum = parseInt(colsAmount.innerText);
+    colsNum--;
+    colsAmount.innerText =colsNum;
+}
 
 
 
 addNewColorButton.addEventListener('click', onClickAddNewColor);
+clickIncreaseRows.addEventListener('click', onChangeRowsUp);
+clickDecreaseRows.addEventListener('click', onChangeRowsDown);
+clickIncreaseCols.addEventListener('click', onChangeColsUp);
+clickDecreaseCols.addEventListener('click', onChangeColsDown);
 
 colors[0] = new Thread('Cocoa - Very Dark');
 colors[1] = new Thread("Tender Green - Very Light");
+//const square = new Square();
+for(let i = 0; i < parseInt(rowsAmount.innerText); i++){
+    createGridRows(); 
+}
 createColor(colors[0]);
 createColor(colors[1]);

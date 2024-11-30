@@ -122,3 +122,35 @@ div.color-option:hover {
     background-color : #C5C9C8;
 }
 
+div.size-change {
+    display : flex;
+    flex-direction : row;
+    justify-content : space-between;
+    width: 120px;
+    margin-left : 15px;
+    margin-right : 30px;
+    height : 40px;
+    padding : 6px;
+    border-style : solid;
+    border-width : 2px;
+    border-color : black;
+    align-items: center;
+    font-size : 17px;
+}
+
+div.change-right {
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    width : 20px;
+    height : 30px;
+    align-items : center;
+}
+
+div.square {
+    width : 20px;
+    min-height : 20px;
+    background-color : white;
+    border-style : solid;
+    border-width : 2px;
+}
