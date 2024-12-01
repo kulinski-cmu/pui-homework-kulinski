@@ -115,14 +115,16 @@ function onChangeRowsUp(){
 }
 
 function onChangeRowsDown(){
-    let rowsNum = parseInt(rowsAmount.innerText);
-    rowsNum--;
-    rowsAmount.innerText =rowsNum;
+    if(parseInt(rowsAmount.innerText) > 0){
+        let rowsNum = parseInt(rowsAmount.innerText);
+        rowsNum--;
+        rowsAmount.innerText =rowsNum;
 
-    currentHeight = currentHeight - 24;
-    gridBox.style.height = currentHeight + 'px';
-    for(let i = 0; i < parseInt(colsAmount.innerText); i++){
-        document.querySelector('#square-div').removeChild(document.querySelector('.square'));
+        currentHeight = currentHeight - 24;
+        gridBox.style.height = currentHeight + 'px';
+        for(let i = 0; i < parseInt(colsAmount.innerText); i++){
+            document.querySelector('#square-div').removeChild(document.querySelector('.square'));
+        }
     }
 }
 
@@ -139,16 +141,55 @@ function onChangeColsUp(){
 }
 
 function onChangeColsDown(){
-    let colsNum = parseInt(colsAmount.innerText);
-    colsNum--;
-    colsAmount.innerText =colsNum;
+    if(parseInt(colsAmount.innerText) > 0){
+        let colsNum = parseInt(colsAmount.innerText);
+        colsNum--;
+        colsAmount.innerText =colsNum;
 
-    currentWidth = currentWidth - 24;
-    gridBox.style.width = currentWidth + 'px';
-    for(let i = 0; i < parseInt(rowsAmount.innerText); i++){
+        currentWidth = currentWidth - 24;
+        gridBox.style.width = currentWidth + 'px';
+        for(let i = 0; i < parseInt(rowsAmount.innerText); i++){
+            document.querySelector('#square-div').removeChild(document.querySelector('.square'));
+        }
+    }
+}
+
+function removeWholeGrid(){
+    for(let i = 0; i < parseInt(rowsAmount.innerText) * parseInt(colsAmount.innerText); i++){
         document.querySelector('#square-div').removeChild(document.querySelector('.square'));
     }
 }
+
+let fileList = null;
+
+async function usePhoto() {
+    fileList = this.files;
+    const photoURL = URL.createObjectURL(fileList[0]);
+    
+    let img = new Image();
+    img.src = photoURL;
+    await img.decode();
+    let imgWidth = img.width;
+    let imgHeight = img.height;
+
+    let imgRowsNum = Math.floor(imgWidth/24);
+    let imgColsNum = Math.floor(imgHeight/24);
+    removeWholeGrid();
+
+    colsAmount.innerText = imgColsNum;
+    rowsAmount.innerText = imgRowsNum;
+    gridBox.style.width = (imgRowsNum * 24) + 'px';
+    gridBox.style.height = (imgColsNum * 24) + 'px';
+
+    for(let i = 0; i < parseInt(colsAmount.innerText) * parseInt(rowsAmount.innerText); i++){
+        createGrid(); 
+    }
+    gridBox.style.backgroundImage = "url('" + photoURL + "')";
+}
+
+const fileInput = document.querySelector('#upload-button');
+
+fileInput.addEventListener('change', usePhoto);
 
 
 
@@ -160,8 +201,10 @@ clickDecreaseCols.addEventListener('click', onChangeColsDown);
 
 colors[0] = new Thread('Cocoa - Very Dark');
 colors[1] = new Thread("Tender Green - Very Light");
+if (fileList === null) {
 for(let i = 0; i < parseInt(colsAmount.innerText) * parseInt(rowsAmount.innerText); i++){
     createGrid(); 
+}
 }
 createColor(colors[0]);
 createColor(colors[1]);

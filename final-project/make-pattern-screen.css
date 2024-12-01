@@ -30,7 +30,7 @@ header {
     font-size : 20px;
 }
 
-div.button {
+button.button {
     display: flex;
     align-self: center;
     justify-content : center;
@@ -110,11 +110,16 @@ div.color-list {
 #right-side-buttons {
     display : flex;
     flex-direction : row;
+    align-items : center;
     justify-content : space-between;
+    max-width : 960px;
+    min-width : 960px;
+    padding-bottom : 10px;
 }
 
 #upload-button {
     margin-left : 420px;
+    margin-right : 0px;
 }
 
 img.temp {
@@ -163,8 +168,14 @@ div.square {
     display: flex;
     flex-direction : row;
     flex-wrap : wrap;
-    padding-right : 40px;
     width : 480px;
     height : 400px;
+}
+
+button.change-button {
+    width : 25px;
+    display : flex;
+    justify-content : center;
+    font-size : 15px;
 }
 
