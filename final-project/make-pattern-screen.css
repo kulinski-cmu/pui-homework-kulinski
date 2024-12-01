@@ -14,7 +14,13 @@ header {
     flex-direction : row;
     flex-wrap : wrap;
     align-content : baseline;
+    justify-content : space-between;
     height : 200px;
+}
+
+#left-header {
+    display : flex;
+    flex-direction : row;
 }
 
 #color-title {
@@ -76,7 +82,7 @@ div.color-list {
 #right-header {
     display : flex;
     flex-direction : row;
-    width: 750px;
+
     justify-content : flex-end;
 }
 
@@ -92,14 +98,13 @@ div.color-list {
 #page {
     display : flex;
     flex-direction : row;
-    justify-content : space-around;
+    
 }
 
 #right-of-page {
     display : flex;
     flex-direction : column;
-    width : 1000px;
-    height : 90px;
+   padding-left : 100px;
 }
 
 #right-side-buttons {
@@ -127,10 +132,10 @@ div.size-change {
     flex-direction : row;
     justify-content : space-between;
     width: 120px;
-    margin-left : 15px;
     margin-right : 30px;
     height : 40px;
     padding : 6px;
+    padding-left : 0;
     border-style : solid;
     border-width : 2px;
     border-color : black;
@@ -150,7 +155,6 @@ div.change-right {
 div.square {
     width : 20px;
     min-height : 20px;
-    background-color : white;
     border-style : solid;
     border-width : 2px;
 }
@@ -158,4 +162,9 @@ div.square {
 #square-div {
     display: flex;
     flex-direction : row;
+    flex-wrap : wrap;
+    padding-right : 40px;
+    width : 480px;
+    height : 400px;
 }
+

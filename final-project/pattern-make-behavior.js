@@ -73,13 +73,13 @@ function createColor(thread) {
     });
 }
 
-function createGridCols(){
+function createGrid(){
     const template = document.querySelector('#pattern-template');
     const clone = template.content.cloneNode(true);
     const square = new Square();
     square.element = clone.querySelector('.square');
 
-        document.querySelector('#square-div').append(square.element);
+    document.querySelector('#square-div').append(square.element);
     
 
     square.element.addEventListener('click', () => {
@@ -91,9 +91,16 @@ function createGridRows(){
     const template = document.querySelector('#row-template');
     const clone = template.content.cloneNode(true);
     const div = new Div();
-    div.element = clone.querySelector('#square-div');
+    div.element = clone.querySelector('#row-div');
 
-    document.querySelector('#right-of-page').append(div.element);
+    document.querySelector('#right-of-page').appendChild(div.element);
+
+    const template2 = document.querySelector('#pattern-template');
+    const clone2 = template2.content.cloneNode(true);
+    const square = new Square();
+    square.element = clone2.querySelector('.square');
+
+    document.querySelector('#square-div').append(square.element);
 }
 
 let clickIncreaseRows = document.querySelector('#upRows');
@@ -108,6 +115,9 @@ function onChangeRowsUp(){
     let rowsNum = parseInt(rowsAmount.innerText);
     rowsNum++;
     rowsAmount.innerText =rowsNum;
+    for(let i = 0; i < parseInt(colsAmount.innerText); i++){
+        createGrid();
+    }
 }
 
 function onChangeRowsDown(){
@@ -116,11 +126,19 @@ function onChangeRowsDown(){
     rowsAmount.innerText =rowsNum;
 }
 
+const gridBox = document.querySelector('#square-div');
+gridBox.style.width = '480px';
+let currentWidth = 480;
 function onChangeColsUp(){
     let colsNum = parseInt(colsAmount.innerText);
     colsNum++;
-    colsAmount.innerText =colsNum;
-    createGridCols();
+    colsAmount.innerText =colsNum;    
+
+    currentWidth = currentWidth + 24;
+    gridBox.style.width = currentWidth + 'px';
+    for(let i = 0; i < parseInt(rowsAmount.innerText); i++){
+        createGrid();
+    }
 }
 
 function onChangeColsDown(){
@@ -139,11 +157,8 @@ clickDecreaseCols.addEventListener('click', onChangeColsDown);
 
 colors[0] = new Thread('Cocoa - Very Dark');
 colors[1] = new Thread("Tender Green - Very Light");
-for(let i = 0; i < parseInt(rowsAmount.innerText); i++){
-    createGridRows();
-}
-for(let i = 0; i < parseInt(colsAmount.innerText); i++){
-    createGridCols(); 
+for(let i = 0; i < parseInt(colsAmount.innerText) * parseInt(rowsAmount.innerText); i++){
+    createGrid(); 
 }
 createColor(colors[0]);
 createColor(colors[1]);
