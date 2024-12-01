@@ -154,3 +154,8 @@ div.square {
     border-style : solid;
     border-width : 2px;
 }
+
+#square-div {
+    display: flex;
+    flex-direction : row;
+}
