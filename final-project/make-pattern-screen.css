@@ -110,7 +110,7 @@ div.color-list {
 #right-side-buttons {
     display : flex;
     flex-direction : row;
-    justify-content : flex-end;
+    justify-content : space-between;
 }
 
 #upload-button {

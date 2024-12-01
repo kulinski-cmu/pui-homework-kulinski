@@ -79,28 +79,12 @@ function createGrid(){
     const square = new Square();
     square.element = clone.querySelector('.square');
 
-    document.querySelector('#square-div').append(square.element);
+    document.querySelector('#square-div').appendChild(square.element);
     
 
     square.element.addEventListener('click', () => {
         square.element.style.backgroundColor = threadColorsByName[currentColor.innerText].hex;
     });
-}
-
-function createGridRows(){
-    const template = document.querySelector('#row-template');
-    const clone = template.content.cloneNode(true);
-    const div = new Div();
-    div.element = clone.querySelector('#row-div');
-
-    document.querySelector('#right-of-page').appendChild(div.element);
-
-    const template2 = document.querySelector('#pattern-template');
-    const clone2 = template2.content.cloneNode(true);
-    const square = new Square();
-    square.element = clone2.querySelector('.square');
-
-    document.querySelector('#square-div').append(square.element);
 }
 
 let clickIncreaseRows = document.querySelector('#upRows');
@@ -111,10 +95,20 @@ let clickDecreaseCols = document.querySelector('#downCols');
 let rowsAmount = document.querySelector("#numberRow");
 let colsAmount = document.querySelector("#numberCols");
 
+const gridBox = document.querySelector('#square-div');
+gridBox.style.width = '960px';
+let currentWidth = 960;
+
+gridBox.style.height = '480px';
+let currentHeight = 480;
+
 function onChangeRowsUp(){
     let rowsNum = parseInt(rowsAmount.innerText);
     rowsNum++;
     rowsAmount.innerText =rowsNum;
+
+    currentHeight = currentHeight + 24;
+    gridBox.style.height = currentHeight + 'px';
     for(let i = 0; i < parseInt(colsAmount.innerText); i++){
         createGrid();
     }
@@ -124,11 +118,14 @@ function onChangeRowsDown(){
     let rowsNum = parseInt(rowsAmount.innerText);
     rowsNum--;
     rowsAmount.innerText =rowsNum;
+
+    currentHeight = currentHeight - 24;
+    gridBox.style.height = currentHeight + 'px';
+    for(let i = 0; i < parseInt(colsAmount.innerText); i++){
+        document.querySelector('#square-div').removeChild(document.querySelector('.square'));
+    }
 }
 
-const gridBox = document.querySelector('#square-div');
-gridBox.style.width = '480px';
-let currentWidth = 480;
 function onChangeColsUp(){
     let colsNum = parseInt(colsAmount.innerText);
     colsNum++;
@@ -145,6 +142,12 @@ function onChangeColsDown(){
     let colsNum = parseInt(colsAmount.innerText);
     colsNum--;
     colsAmount.innerText =colsNum;
+
+    currentWidth = currentWidth - 24;
+    gridBox.style.width = currentWidth + 'px';
+    for(let i = 0; i < parseInt(rowsAmount.innerText); i++){
+        document.querySelector('#square-div').removeChild(document.querySelector('.square'));
+    }
 }
 
 
