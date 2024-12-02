@@ -1,4 +1,5 @@
 import threadColorsByName from './threadColors.js';
+import Swal from '../node_modules/sweetalert2/src/sweetalert2.js';
 
 class Thread{
     constructor(name) {
@@ -23,34 +24,38 @@ class Div{
 let addNewColorButton = document.querySelector('#new-color-button');
 
 const colors = []; 
-let currentColor = 'test';
-const userInput = 'Cocoa - Very Dark';
-
-
-
-const popup = new Popup ({
-    id : "color-add",
-    title : "Choose a New Color to Add",
-    content : `
-     {btn-search}[Search]{btn-enter}[Add]`,
-
-    
-
-    loadCallback: () => {
-        document.querySelector(".popup.color-add button.enter").addEventListener("click", () => {
-            colors.push(currentColor);
-            console.log(colors);
-        });
-        
-        document.querySelector(".popup.color-add button.search").addEventListener("click", () => {
-            console.log(threadColorsByName[userInput].number);
-       });
-    },
-});
-
+let currentColor;
 
 function onClickAddNewColor(){
-    popup.show();
+    Swal.fire({
+        title: "Add New Color to Project",
+        input: "text",
+        inputAttributes: {
+          autocapitalize: "on"
+        },
+        showCancelButton: true,
+        confirmButtonText: "Look up",
+        showLoaderOnConfirm: true,
+        preConfirm: async (colorName) => {
+          try {
+            const newColor = threadColorsByName[colorName];
+            if (!newColor) {
+              return Swal.showValidationMessage('Thread Color Not Found');
+            }
+          } catch (error) {
+            Swal.showValidationMessage(`
+              Request failed: ${error}
+            `);
+          }
+        },
+        allowOutsideClick: () => !Swal.isLoading()
+      }).then((result) => {
+        if (result.isConfirmed) {
+            colors.push((result.value));
+            const newThread = new Thread(result.value);
+            createColor(newThread);
+        }
+      });
 }
 
 function createColor(thread) {
@@ -206,5 +211,3 @@ for(let i = 0; i < parseInt(colsAmount.innerText) * parseInt(rowsAmount.innerTex
     createGrid(); 
 }
 }
-createColor(colors[0]);
-createColor(colors[1]);
