@@ -6,7 +6,13 @@
     width: 250px;
     border-style : solid;
     border-color : black;
-    justify-content : space-between;
+    margin-left : 30px;
+    
+}
+
+#autoComplete {
+    width : 230px;
+    margin-left : 10px;
 }
 
 header {
@@ -14,7 +20,7 @@ header {
     flex-direction : row;
     flex-wrap : wrap;
     align-content : baseline;
-    justify-content : space-between;
+    justify-content : flex-end;
     height : 200px;
 }
 
@@ -63,6 +69,7 @@ div.color-list {
     flex-wrap : wrap;
     flex-direction : column;
     justify-content : space-around;
+    padding-top : 30px;
 }
 
 #number {

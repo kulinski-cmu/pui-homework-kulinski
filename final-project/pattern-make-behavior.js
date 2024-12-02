@@ -1,5 +1,7 @@
 import threadColorsByName from './threadColors.js';
 import Swal from '../node_modules/sweetalert2/src/sweetalert2.js';
+import autoComplete from "../node_modules/@tarekraafat/autocomplete.js/src/autoComplete.js";
+//import { jsPDF } from "../node_modules/jspdf/dist/jspdf.node.js";
 
 class Thread{
     constructor(name) {
@@ -26,44 +28,70 @@ let addNewColorButton = document.querySelector('#new-color-button');
 const colors = []; 
 let currentColor;
 
-function onClickAddNewColor(){
-    Swal.fire({
-        title: "Add New Color to Project",
-        input: "text",
-        inputAttributes: {
-          autocapitalize: "on"
-        },
-        showCancelButton: true,
-        confirmButtonText: "Look up",
-        showLoaderOnConfirm: true,
-        preConfirm: async (colorName) => {
-          try {
-            const newColor = threadColorsByName[colorName];
-            if (!newColor) {
-              return Swal.showValidationMessage('Thread Color Not Found');
+const autoCompleteJS = new autoComplete({
+   
+    placeHolder : "Add New Thread Color",
+    data : {
+        src: Object.keys(threadColorsByName),
+        cache: true,
+    },
+    resultsList : {
+        element: (list, data) => {
+            if(!data.results.length) {
+                const message = document.createElement('div');
+                message.setAttribute("class", "no_result");
+                message.innerHTML = `<span>Found No Results for "${data.query}"</span>`;
+                list.prepend(message);
             }
-          } catch (error) {
-            Swal.showValidationMessage(`
-              Request failed: ${error}
-            `);
-          }
         },
+        noResults: true,
+        maxResults: 30,
+    },
+    resultItem : {
+        highlight : true,
+    },
+    events: {
+        input: {
+            selection: (event) => {
+                const selection = event.detail.selection.value;
+                autoCompleteJS.input.value = selection;
+                onClickAddNewColor(selection);
+            }
+        }
+    }
+});
+
+
+function onClickAddNewColor(colorName){
+    Swal.fire({ 
+        title: "Add " + colorName + "?",
+        showCancelButton: true,
+        confirmButtonText: "Add",
+        
         allowOutsideClick: () => !Swal.isLoading()
       }).then((result) => {
         if (result.isConfirmed) {
-            colors.push((result.value));
-            const newThread = new Thread(result.value);
+            colors.push((colorName));
+            const newThread = new Thread(colorName);
             createColor(newThread);
         }
       });
 }
 
+
+
+let colorBoxSize = 608;
 function createColor(thread) {
     const template = document.querySelector('#color-template');
     const clone = template.content.cloneNode(true);
     thread.element = clone.querySelector('.color-option');
 
     const threadList = document.querySelector('.color-list');
+    const colorBox = document.querySelector('#add-new-color');
+    if(colors.length > 6) {
+        colorBoxSize = colorBoxSize + 68;
+        colorBox.style.height = colorBoxSize + 'px';
+    }
     threadList.append(thread.element);
     let name = thread.element.querySelector('#name');
     let number = thread.element.querySelector('#number');
@@ -192,22 +220,31 @@ async function usePhoto() {
     gridBox.style.backgroundImage = "url('" + photoURL + "')";
 }
 
+function onClickNewPattern(){
+    window.alert("Are you sure you want to make a new pattern?");
+    location.replace(location.href);
+}
+
 const fileInput = document.querySelector('#upload-button');
 
 fileInput.addEventListener('change', usePhoto);
 
 
-
-addNewColorButton.addEventListener('click', onClickAddNewColor);
 clickIncreaseRows.addEventListener('click', onChangeRowsUp);
 clickDecreaseRows.addEventListener('click', onChangeRowsDown);
 clickIncreaseCols.addEventListener('click', onChangeColsUp);
 clickDecreaseCols.addEventListener('click', onChangeColsDown);
 
-colors[0] = new Thread('Cocoa - Very Dark');
-colors[1] = new Thread("Tender Green - Very Light");
 if (fileList === null) {
 for(let i = 0; i < parseInt(colsAmount.innerText) * parseInt(rowsAmount.innerText); i++){
     createGrid(); 
 }
+}
+
+const newPattern = document.querySelector('#new-pattern');
+newPattern.addEventListener('click', onClickNewPattern);
+const learn = document.querySelector('#learn-button');
+learn.addEventListener('click', onClickLearn);
+function onClickLearn(){
+    window.alert("You are being taken to a new page.");
 }

@@ -6,31 +6,35 @@
     <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.2/popup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/graphpaper@0.6.0/src/graphpaper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.9/dist/autoComplete.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.9/dist/css/autoComplete.01.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+
 
     <link rel="stylesheet" type="text/css" href="make-pattern-screen.css"/>
   </head>
-
+  
   <header>
     <div id = "left-header">
-    <button class = "button">
-      My Patterns
+    <!--<button class = "button">
+      Save Pattern
     </button>
-    <button class = "button">
+  -->
+    <button class = "button" id ="new-pattern">
       New Pattern
     </button>
-    <button class = "button">
+    <a href = "https://www.dmc.com/US/en/explore-cross-stitch">
+    <button class = "button" id = "learn-button">
       Learn
     </button>
+  </a>
     </div>
-    <div id = "right-header">
-      <button class = "button" id = "round">
-        U
-      </button>
-    </div>
+
   </header>
 <div id = "page">
   <div id = "add-new-color">
     <p id = "color-title">Colors In This Project</p>
+    <input id="autoComplete" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off">
     <div class = "color-list">
       <template id = "color-template">
         <div class = "color-option">
@@ -46,9 +50,9 @@
           </div>
       </template>
     </div>
-    <button class = "button" id = "new-color-button">
-      Add New Color
-    </button>
+    
+    
+
   </div> 
 <div id = "right-of-page">
   <div id = "right-side-buttons">
@@ -76,6 +80,7 @@
     <div class = "square"></div>
   </template>
   </div>
+
 
 
 
