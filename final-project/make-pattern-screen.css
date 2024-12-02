@@ -177,6 +177,7 @@ div.square {
     flex-wrap : wrap;
     width : 480px;
     height : 400px;
+    margin-right : 20px;
 }
 
 button.change-button {
