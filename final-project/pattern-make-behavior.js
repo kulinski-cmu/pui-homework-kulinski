@@ -61,13 +61,45 @@ const autoCompleteJS = new autoComplete({
     }
 });
 
+const hexNum = {
+    "0" : 0,
+    "1" : 1,
+    "2" : 2,
+    "3" : 3,
+    "4" : 4,
+    "5" : 5,
+    "6" : 6,
+    "7" : 7,
+    "8" : 8,
+    "9" : 9,
+    "A" : 10,
+    "B" : 11,
+    "C" : 12,
+    "D" : 13,
+    "E" : 14,
+    "F" : 15,
+};
+
+let rgbaValue;
+function getRGB(threadName){
+    let R = threadColorsByName[threadName].hex.charAt(1) + threadColorsByName[threadName].hex.charAt(2);
+    let G = threadColorsByName[threadName].hex.charAt(3) + threadColorsByName[threadName].hex.charAt(4);
+    let B = threadColorsByName[threadName].hex.charAt(5) + threadColorsByName[threadName].hex.charAt(6);
+    let RNum = (16 * hexNum[R.charAt(0)]) + hexNum[R.charAt(1)];
+    let GNum = (16 * hexNum[G.charAt(0)]) + hexNum[G.charAt(1)];
+    let BNum = (16 * hexNum[B.charAt(0)]) + hexNum[B.charAt(1)];
+    rgbaValue = "rgba(" + RNum + "," + GNum + "," + BNum + ",1.0)";
+    console.log(rgbaValue);
+}
+
 
 function onClickAddNewColor(colorName){
+    getRGB(colorName);
     Swal.fire({ 
         title: "Add " + colorName + "?",
         showCancelButton: true,
         confirmButtonText: "Add",
-        
+        backdrop: `${rgbaValue}`,
         allowOutsideClick: () => !Swal.isLoading()
       }).then((result) => {
         if (result.isConfirmed) {
