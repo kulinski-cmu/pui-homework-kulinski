@@ -89,7 +89,6 @@ function getRGB(threadName){
     let GNum = (16 * hexNum[G.charAt(0)]) + hexNum[G.charAt(1)];
     let BNum = (16 * hexNum[B.charAt(0)]) + hexNum[B.charAt(1)];
     rgbaValue = "rgba(" + RNum + "," + GNum + "," + BNum + ",1.0)";
-    console.log(rgbaValue);
 }
 
 
@@ -109,6 +108,7 @@ function onClickAddNewColor(colorName){
         }
       });
 }
+
 
 
 
