@@ -23,13 +23,13 @@ class Div{
     }
 }
 
-let addNewColorButton = document.querySelector('#new-color-button');
 
 const colors = []; 
 let currentColor;
-
+/**
+ * This activates and shows the autocomplete function when searching for a new thread color
+ */
 const autoCompleteJS = new autoComplete({
-   
     placeHolder : "Add New Thread Color",
     data : {
         src: Object.keys(threadColorsByName),
@@ -61,6 +61,7 @@ const autoCompleteJS = new autoComplete({
     }
 });
 
+//connection between hex value and decimal number
 const hexNum = {
     "0" : 0,
     "1" : 1,
@@ -80,6 +81,10 @@ const hexNum = {
     "F" : 15,
 };
 
+/**
+ * This function changes the hex value of the color into a rgb value
+ * @param threadName the name of the color
+ */
 let rgbaValue;
 function getRGB(threadName){
     let R = threadColorsByName[threadName].hex.charAt(1) + threadColorsByName[threadName].hex.charAt(2);
@@ -91,7 +96,10 @@ function getRGB(threadName){
     rgbaValue = "rgba(" + RNum + "," + GNum + "," + BNum + ",1.0)";
 }
 
-
+/**
+ * This function shows the popup when you select a new color to add to the project
+ * @param {*} colorName the name of the thread
+ */
 function onClickAddNewColor(colorName){
     getRGB(colorName);
     Swal.fire({ 
@@ -106,13 +114,17 @@ function onClickAddNewColor(colorName){
             const newThread = new Thread(colorName);
             createColor(newThread);
         }
-      });
+    });
 }
 
 
 
 
 let colorBoxSize = 608;
+/**
+ * this function adds the color template to the screen, showing the color, name, and number
+ * @param {*} thread  the thread object that contains the information about the thread color
+ */
 function createColor(thread) {
     const template = document.querySelector('#color-template');
     const clone = template.content.cloneNode(true);
@@ -138,6 +150,9 @@ function createColor(thread) {
     });
 }
 
+/**
+ * This function creates the design grid on the square
+ */
 function createGrid(){
     const template = document.querySelector('#pattern-template');
     const clone = template.content.cloneNode(true);
@@ -152,6 +167,7 @@ function createGrid(){
     });
 }
 
+//gets all the buttons on the screen
 let clickIncreaseRows = document.querySelector('#upRows');
 let clickDecreaseRows = document.querySelector("#downRows");
 let clickIncreaseCols = document.querySelector("#upCols");
@@ -167,6 +183,9 @@ let currentWidth = 960;
 gridBox.style.height = '480px';
 let currentHeight = 480;
 
+/**
+ * This function increases the number of rows in the design grid
+ */
 function onChangeRowsUp(){
     let rowsNum = parseInt(rowsAmount.innerText);
     rowsNum++;
@@ -179,6 +198,9 @@ function onChangeRowsUp(){
     }
 }
 
+/**
+ * This function decreases the number of rows in the grid
+ */
 function onChangeRowsDown(){
     if(parseInt(rowsAmount.innerText) > 0){
         let rowsNum = parseInt(rowsAmount.innerText);
@@ -193,6 +215,9 @@ function onChangeRowsDown(){
     }
 }
 
+/**
+ * This function increases the number of columns in the row
+ */
 function onChangeColsUp(){
     let colsNum = parseInt(colsAmount.innerText);
     colsNum++;
@@ -205,6 +230,9 @@ function onChangeColsUp(){
     }
 }
 
+/**
+ * This function decreases the number of columns in the grid
+ */
 function onChangeColsDown(){
     if(parseInt(colsAmount.innerText) > 0){
         let colsNum = parseInt(colsAmount.innerText);
@@ -219,6 +247,9 @@ function onChangeColsDown(){
     }
 }
 
+/**
+ * This function removes the whole grid from the screen
+ */
 function removeWholeGrid(){
     for(let i = 0; i < parseInt(rowsAmount.innerText) * parseInt(colsAmount.innerText); i++){
         document.querySelector('#square-div').removeChild(document.querySelector('.square'));
@@ -227,6 +258,9 @@ function removeWholeGrid(){
 
 let fileList = null;
 
+/**
+ * This function takes in the photo file and resizes the grid based on the dimensions of the photo
+ */
 async function usePhoto() {
     fileList = this.files;
     const photoURL = URL.createObjectURL(fileList[0]);
@@ -252,9 +286,19 @@ async function usePhoto() {
     gridBox.style.backgroundImage = "url('" + photoURL + "')";
 }
 
+/**
+ * creates a new, blank pattern for the user
+ */
 function onClickNewPattern(){
     window.alert("Are you sure you want to make a new pattern?");
     location.replace(location.href);
+}
+
+/**
+ * takes the user to the DMC website to learn information about how to cross stitch
+ */
+function onClickLearn(){
+    window.alert("You are being taken to a new page.");
 }
 
 const fileInput = document.querySelector('#upload-button');
@@ -267,6 +311,9 @@ clickDecreaseRows.addEventListener('click', onChangeRowsDown);
 clickIncreaseCols.addEventListener('click', onChangeColsUp);
 clickDecreaseCols.addEventListener('click', onChangeColsDown);
 
+/**
+ * sets the grid if there is not a file loaded into the project
+ */
 if (fileList === null) {
 for(let i = 0; i < parseInt(colsAmount.innerText) * parseInt(rowsAmount.innerText); i++){
     createGrid(); 
@@ -277,6 +324,3 @@ const newPattern = document.querySelector('#new-pattern');
 newPattern.addEventListener('click', onClickNewPattern);
 const learn = document.querySelector('#learn-button');
 learn.addEventListener('click', onClickLearn);
-function onClickLearn(){
-    window.alert("You are being taken to a new page.");
-}
