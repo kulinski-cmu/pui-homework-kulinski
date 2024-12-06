@@ -11,97 +11,69 @@ Feel free to refer to this [Markdown Cheat Sheet](https://www.markdownguide.org/
 
 ## Part 1: Website Description
 
-Describe your website (300 words).
+My website is a pattern maker for cross stitch projects. You can change the size of the project, add colors and designs to the grid, and put a photo background behind the grid. 
 
-* What is the purpose of your website?   
-* Who is the target audience?  
-* What information do you convey with your website?   
-* How is it interesting and engaging? 
+The target audience of my website are current cross stitch crafters. I didn’t focus on how to do the craft because my audience already knows how to do it. 
+
+The information conveyed by this website is a visual display of the design that a person wants to make. This provides the user with an understanding of what they want to make and the amount of space it might make up. It also lets them understand how different aspects of a design may look next to each other. Additionally, the colors of the threads are displayed both before you choose to add it to the pattern and after. DMC, the main company that makes thread for cross stitch, has hundreds of different colors. My website helps people understand how the different colors will look next to each other and what would look best for your project. 
+
+My website is engaging because it is asking the user to make their project. Without the user’s input, there is no pattern. The input from the user is the single most important aspect of the website. My website is interesting because of all the data I put together for showing the color. It’s important to know the color, name, and number associated with each thread and I wanted to make sure that each was displayed correctly.
 
 ## Part 2: User Interaction
 
-How a user would interact with your website? For each step, briefly but clearly state the interaction type & how we should reproduce it.
-
-1. Interaction type. Click on X on page Y / scroll on page X, etc.  
-2. 
+1. Text input. Type text into the bar labeled “Add New Thread Color”. You can then click on a name to add it to the project.
+2. File input. Click on “Choose File” to add a new photo to the website. This will put a photo behind the grid for the user to use.
+3. Select a color. When you hover over each color name a gray background will show up. You are able to click anywhere in that rectangle to access the color.
+4. Click to resize the grid. Click the plus or minus button for either the rows or columns to change the size of the grid.
+5. Click on the grid. After you select a color, you can change the color of the squares in the grid by clicking each one.
+6. Clicking to reset the grid. You can reset the grid to its default state by clicking the “New Pattern” button.
+7. Clicking to travel to a new page. You can travel to the DMC learning page by clicking on the “Learn” button.
 
 ## Part 3: External Tool
-
-Describe what important external tool you used (JavaScript library, Web API, animations, or other). Following the bulleted list format below, reply to each of the prompts.
-
-1. Name of tool1  
-   * Why did you choose to use it over other alternatives? (2 sentences max)  
-   * How you used it? (2 sentences max)  
-   * What does it add to your website? (2 sentences max)  
-2. Name of tool2
+1. Node.js 
+   * I used this tool because it was required for the libraries that I chose.
+   * I used it to set up the other libraries in my project. 
+   * It does not add anything directly to my website, but was needed to set up the other libraries.  
+2. AutoComplete.js
+   * I chose this tool because I was able to define the terms that were included in the autocomplete feature.
+   * I used it to help the user find the specific color they want without needing to know the exact name or spelling.
+   * It increases usability because users have more choices and abilities when it comes to finding a new color to use.
+3. SweetAlert2.js
+   * I chose this library over others because of the amount of customization that it offered and the overall look of the popup.
+   * I used to provide information about what the color looks like before it is added and gives the user the choice to cancel that option.
+   * It adds more information about a selection and allows the user to cancel a choice.
 
 ## Part 4: Design Iteration
 
-Describe how you iterated on your prototypes, if at all, including any changes you made to your original design while you were implementing your website and the rationale for the changes. (4-8 sentences max)
+The change I made to the design was moving the buttons from the left to the right. By adding the title, this change helped to better balance the website layout and the overall look of the page. I also moved the input for new colors from the bottom of the thread box to the top. As the list of threads gets longer, the user would not need to scroll to add more colors.
 
 ## Part 5: Implementation Challenge
 
-What challenges did you experience in implementing your website? (2-4 sentences max)
+My main struggle was with pathing for the different libraries I wanted to use. When trying to use a library, I would need to download the library into my project and then path to it. However, the instructions that were provided by the different websites and documentation did not match what I needed to do and was not helpful to solving the errors.
 
 ## Part 6: Generative AI Use and Reflection
 
-Describe how you used Generative AI tools to create this final project (fill in the following information, write \~500 words in total).
-
-Document your use of all GenAI tools — ChatGPT, Copilot, Claude, Cursor, etc. using the template below. Add/Delete rows or bullet points if needed, and replace Tool1/Tool2 with the name of the tool.
-
-### Usage Experiences by Project Aspects
-
-Feel free to edit the column \_ (other?) or add more columns if there's any other aspect in your project you've used the GenAI tools for.
-
-For the following aspects of your project, edit the corresponding table cell to answer:
-- *Usage*: Whether you used / did not use this tool for the aspect. Enter [Yes/No]
-- *Productivity*: Give a rating on whether this tool makes your productivity for X aspect [1-Much Reduced, 2-Reduced, 3-Slightly Reduced, 4-Not Reduced nor Improved, 5-Slightly Improved, 6-Improved, 7-Much Improved].
-
-| Tool Name | Ratings | design | plan | write code | debug | \_ (other?) |
-| :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| Tool1 | Usage | Yes/No | Yes/No | Yes/No | Yes/No | Yes/No |
-| Tool1 | Productivity | 1~7 | 1~7 | 1~7 | 1~7 | 1~7 |
-| Tool2| Usage | Yes/No | Yes/No | Yes/No | Yes/No | Yes/No |
-| Tool2 | Productivity | 1~7 | 1~7 | 1~7 | 1~7 | 1~7 |
-
+I did not use generative AI for my project. I do not like using generative AI for any aspect of my life, especially when I work on coding projects. Since I am still learning how to program with JavaScript, I don’t want to use generative AI so that I can better understand what I am doing and why I am doing it. When working with code, especially in languages that I may not fully understand, understanding where to get new knowledge is an important step in the learning process. With this project I was not just practicing my programming skills, but also practicing my ability to read documentation from all sources. I understand that generative AI is a new tool for gathering information about coding techniques, but I do not currently have enough experience to check the output of the generative AI. It is more important to me to be able to explain how my code works than to do it quickly.
 
 ### Usage Reflection
 
-> Impact on your design and plan 
-* It matched my expectations and plan in [FP2](#generative-ai-use-plan) in that … For example, 
-  1. Tool1: 
-  2. Tool2:
-* It did not match my expectations and plan in [FP2](#generative-ai-use-plan) in that … For example, 
-  1. Tool1: 
-  2. Tool2:
-* GenAI tool did/did not influence my final design and implementation plan because … For example, 
-  1. Tool1: 
-  2. Tool2:
-
-> Use patterns
-* I accepted the generations when …  For example, 
-  1. Tool1: this tool once suggested … and I adjusted my design according to the suggestion because … 
-  2. Tool2: 
-* I critiqued/evaluated the generated suggestions by … For example, 
-  1. Tool1: this tool once suggested … but I modified/rejected the suggestion because … 
-  2. Tool2: 
-
-
+ In [FP2](#generative-ai-use-plan), I mentioned that I may choose to use generative AI to help me create copy or specific information within the website. However, instead of writing the instructions myself, I chose to use some already made directions. I did stick with my plan to not use generative AI. 
+  
 > Pros and cons of using GenAI tools
 * Pros
-  1. Tool1: 
-  2. Tool2:
+  1. Condenses information and puts it into one place.
+  2. Decreases the amount of time spent on finding information.
 * Cons
-  1. Tool1: 
-  2. Tool2:
+  1. Ethical implications of using generative AI in general and specifically for designing.
+  2. Not knowing where information/data came from.
+  3. Not knowing if information is true.
+  4. The tendency of generative AI to make up information.
+  5. Difficulty with fact-checking information if you don’t already understand the information.
 
 
 ### Usage Log
 
-Document the usage logs (prompts and chat history links) for the GenAI tools you used. Some tools may not have an easy way to share usage logs, just try your best! Some instructions for different tools:
-
-1. [ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq) / [Gemini](https://support.google.com/gemini/answer/13743730?hl=en&co=GENIE.Platform%3DDesktop): share the anonymous link to all of your chat histories relevant to this project
-2. [GitHub Copilot (VSCode)](https://code.visualstudio.com/docs/copilot/copilot-chat#:~:text=You%20can%20export%20all%20prompts%20and%20responses%20for%20a%20chat%20session%20in%20a%20JSON%20file%20with%20the%20Chat%3A%20Export%20Session...%20command%20(workbench.action.chat.export)%20in%20the%20Command%20Palette.): export chat histories relevant to this project.
+No logs to document.
 
 ---
 
@@ -111,13 +83,33 @@ Document the changes and progress of your project. How have you followed or chan
 
 ## Implementation Plan Updates
 
-- [ ] ...
+- [x] Week 9 Oct 28 \- Nov 1:
+  - [X] FP1 due
+  
+- [x] Week 10 Nov 4 \- Nov 8:   
+  - [x] FP2 due
+  - [x] begin implementing layout of new pattern page
+
+- [x] Week 11 Nov 11 \- Nov 15:
+  - [x] finish implementing layout of "New Pattern" page
+          
+- [x] Week 12 Nov 18 \- Nov 22:
+  - [x] implement the "Add color" function on the "New Pattern" page
+  - [x] implement popup for adding the color to the pattern
+        
+- [ ] Week 13 Nov 25 \- Nov 29:
+  - [ ] implement the grid functionality
+  - [ ] implement uploading images 
+
+  - [ ] Thanksgiving  
+- [ ] Week 14 Dec 2 \- Dec 6:  
+  - [ ] implement feedback provided by TA and class after final presentation
+  - [ ] FP4 due
 
 ## Generative AI Use Plan Updates
 
-- [ ] ...
+My plan for not using generative AI has not changed.
 
-Remember to keep track of your prompts and usage for [FP4 writeup](#part-6-generative-ai-use-and-reflection).
 
 ---
 
