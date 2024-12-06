@@ -22,7 +22,6 @@ body {
 header {
     display : flex;
     flex-direction : row;
-    flex-wrap : wrap;
     align-content : baseline;
     justify-content : space-between;
     height : 200px;
