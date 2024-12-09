@@ -2,6 +2,7 @@ import threadColorsByName from './threadColors.js';
 import Swal from './node_modules/sweetalert2/src/sweetalert2.js';
 import autoComplete from "./node_modules/@tarekraafat/autocomplete.js/src/autoComplete.js";
 
+
 class Thread{
     constructor(name) {
         this.name = name;
