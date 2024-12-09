@@ -1,3 +1,7 @@
+body {
+    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 #add-new-color {
     display : flex;
     flex-direction : column;
@@ -18,15 +22,22 @@
 header {
     display : flex;
     flex-direction : row;
-    flex-wrap : wrap;
     align-content : baseline;
-    justify-content : flex-end;
+    justify-content : space-between;
     height : 200px;
 }
 
-#left-header {
+h1 {
+    color : #376A3E;
+    font-size : 70px;
+    font-weight : bold;
+    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#right-header {
     display : flex;
     flex-direction : row;
+    align-items : center;
 }
 
 #color-title {
@@ -119,7 +130,7 @@ div.color-list {
     flex-direction : row;
     align-items : center;
     justify-content : space-between;
-    max-width : 960px;
+    max-width : 990px;
     min-width : 960px;
     padding-bottom : 10px;
 }
@@ -143,7 +154,7 @@ div.size-change {
     display : flex;
     flex-direction : row;
     justify-content : space-between;
-    width: 120px;
+    width: 140px;
     margin-right : 30px;
     height : 40px;
     padding : 6px;
