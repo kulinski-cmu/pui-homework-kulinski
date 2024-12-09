@@ -1,3 +1,4 @@
+console.log('test0');
 import threadColorsByName from './threadColors.js';
 console.log('test1');
 import Swal from "./node_modules/sweetalert2/src/sweetalert2.js";
