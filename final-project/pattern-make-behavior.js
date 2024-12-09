@@ -314,11 +314,10 @@ clickDecreaseCols.addEventListener('click', onChangeColsDown);
 /**
  * sets the grid if there is not a file loaded into the project
  */
-if (fileList === null) {
 for(let i = 0; i < parseInt(colsAmount.innerText) * parseInt(rowsAmount.innerText); i++){
     createGrid(); 
 }
-}
+
 
 const newPattern = document.querySelector('#new-pattern');
 newPattern.addEventListener('click', onClickNewPattern);
