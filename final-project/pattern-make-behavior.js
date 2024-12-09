@@ -1,6 +1,6 @@
 import threadColorsByName from './threadColors.js';
-import Swal from '../node_modules/sweetalert2/src/sweetalert2.js';
-import autoComplete from "../node_modules/@tarekraafat/autocomplete.js/src/autoComplete.js";
+//import Swal from '../node_modules/sweetalert2/src/sweetalert2.js';
+//import autoComplete from "../node_modules/@tarekraafat/autocomplete.js/src/autoComplete.js";
 //import { jsPDF } from "../node_modules/jspdf/dist/jspdf.node.js";
 
 class Thread{
