@@ -1,5 +1,5 @@
 import threadColorsByName from './threadColors.js';
-import Swal from './final-project/node_modules/sweetalert2/src/sweetalert2.js';
+import Swal from "sweetalert2.js";
 import autoComplete from "./final-project/node_modules/@tarekraafat/autocomplete.js/src/autoComplete.js";
 
 
