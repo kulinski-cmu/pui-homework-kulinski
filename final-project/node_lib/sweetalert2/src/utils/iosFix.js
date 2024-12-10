@@ -1,4 +1,4 @@
-import { swalClasses } from '../utils/classes.js'
+import { swalClasses } from './classes.js'
 import * as dom from './dom/index.js'
 
 // @ts-ignore
