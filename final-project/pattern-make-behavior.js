@@ -1,11 +1,6 @@
-console.log('test0');
 import threadColorsByName from './threadColors.js';
-console.log('test1');
 import Swal from "./node_modules/sweetalert2/src/sweetalert2.js";
-console.log('test2'
-);
 import autoComplete from "./node_modules/@tarekraafat/autocomplete.js/src/autoComplete.js";
-console.log('test3');
 
 
 class Thread{
