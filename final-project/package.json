@@ -1,0 +1,16 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "<mark>**Note that this document order from FP4 -> FP1**</mark>",
+  "main": "pattern-make-behavior.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tarekraafat/autocomplete.js": "^10.2.9",
+    "sweetalert2": "^11.14.5"
+  }
+}

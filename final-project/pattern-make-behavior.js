@@ -1,6 +1,12 @@
+// import threadColorsByName from './threadColors.js';
+// import Swal from "./node_modules/sweetalert2/src/sweetalert2.js";
+// import autoComplete from "./node_modules/@tarekraafat/autocomplete.js/src/autoComplete.js";
+
 import threadColorsByName from './threadColors.js';
-import Swal from "../node_modules/sweetalert2/src/sweetalert2.js";
-import autoComplete from "../node_modules/@tarekraafat/autocomplete.js/src/autoComplete.js";
+// import Swal from './assets/sweetalert2/sweetalert2.js';
+//import autoComplete from './assets/autocomplete/autoComplete.js';
+
+
 
 
 class Thread{
